@@ -1,14 +1,16 @@
 import './App.css';
-import FormBuilder from './Components/FormBuilder';
+import Header from './Components/Header'
+import Footer from './Components/Footer'
+import Form from './Components/Form'
 import Example from './Tests/Example2';
 
 function App() {
   const data = (Example['formList'])
   return (
     <div className='App'>
-      <FormBuilder
-        data={data}
-      />
+      <Header />
+      <Form />
+      <Footer />
     </div>
   );
 }

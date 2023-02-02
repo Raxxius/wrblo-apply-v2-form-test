@@ -1,6 +1,6 @@
 import { useState } from "react"
 import FormBuilder from "../Components/FormBuilder"
-import FormConstructor from "../Components/FormConstructor"
+import FormConstructor from "./FormConstructor"
 import TEST_JSON from "../Tests/test-JSON-fetch"
 
 
