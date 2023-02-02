@@ -200,7 +200,6 @@ const FormBuilder = (props) => {
               color: "white",
               backgroundColor: "darkblue",
               padding: "5px",
-              marginTop: "20px"
             }}
           >
             {form.legend}
