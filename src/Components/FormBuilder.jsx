@@ -227,7 +227,6 @@ const FormBuilder = (props) => {
         className="header-box"
         style={{
           width: "85vw",
-          maxWidth: "900px",
           display: "flex",
           justifyContent: "space-between",
           alignItems: "center",
