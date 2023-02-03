@@ -11,7 +11,9 @@ export default function Form() {
 
   /* state management */
   const [formIntro, numberOfPages, pages] = parseData(DATA);
-  const [pageNumber, setPageNumber] = useState(1);
+  const [pageNumber, setPageNumber] = useState(3);
+  const [displayedPage, setDisplayedPage] = useState(pages[pageNumber-1])
+  console.log(displayedPage)
 
   return (
     <>
@@ -23,7 +25,10 @@ export default function Form() {
         setPageNumber={setPageNumber}
         pages={pages}
       />
-      {/* <FormBuilder /> */}
+      <FormBuilder 
+        formData={displayedPage}
+        setFormData={setDisplayedPage}
+      />
       <FormFooter />
     </>
   );

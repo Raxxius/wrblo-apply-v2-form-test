@@ -1,4 +1,4 @@
-import { useState } from "react";
+import FormItem from './FormItem'
 
 /**
  * format =
@@ -26,105 +26,12 @@ import { useState } from "react";
  *
  */
 
-/* indivdual form component */
-
-const FormItem = (props) => {
-  let helpButton = "";
-
-  if (props.helpButton != undefined) {
-    helpButton = (
-      <button className="help" onClick={handleHelpButton}>
-        ?
-      </button>
-    );
-  }
-
-  let input = (
-    <input
-      id={props.id}
-      type={props.listType}
-      maxLength={props.maxCharacter}
-      onChange={handleChange}
-      value={props.value}
-      style={{
-        width: "40vw",
-        textAlign: "left",
-        paddingLeft: "5vw",
-      }}
-    ></input>
-  );
-
-  if (props.listType === "textarea") {
-    input = (
-      <textarea
-        id={props.id}
-        type={props.listType}
-        maxLength={props.maxCharacter}
-        onChange={handleChange}
-        value={props.value}
-        style={{
-          width: "40vw",
-          textAlign: "left",
-          padding: "5px",
-          height: "150px",
-        }}
-      ></textarea>
-    );
-  }
-
-  function handleHelpButton() {
-    alert(props.helpButton);
-  }
-
-  function handleChange(event) {
-    const newFormData = props.formData.map((form) => {
-      if (form.id === event.target.id) {
-        return { ...form, formText: event.target.value };
-      } else if (form.listType === "fieldset") {
-        const subFormData = form["list"].map((subform) => {
-          if (subform.id === event.target.id)
-            return { ...subform, formText: event.target.value };
-          return subform;
-        });
-        return { ...form, list: subFormData };
-      }
-      return form;
-    });
-    props.setFormData(newFormData);
-  }
-
-  /** core return */
-  return (
-    <div
-      className="form_item"
-      style={{
-        display: "flex",
-        flexDirection: "row",
-        width: "80vw",
-      }}
-    >
-      <label
-        className="form"
-        htmlFor={props.id}
-        style={{
-          width: "20vw",
-          textAlign: "left",
-          paddingLeft: "5vw",
-          paddingRight: "5vw",
-        }}
-      >
-        {props.formtitle}
-      </label>
-      {input}
-      {helpButton}
-    </div>
-  );
-};
 
 /* core form builder */
 const FormBuilder = (props) => {
-  /* State variables */
-  const [formData, setFormData] = useState(props.data);
+  const formData = props.formData
+  const setFormData = props.setFormData
+  console.log(formData)
 
   /* Style variables */
   const style = {
@@ -136,9 +43,9 @@ const FormBuilder = (props) => {
   };
 
   /* Handle Save */
-  function handleSave() {
+  function handleSave(pages) {
     alert("saving application form");
-    const submitData = JSON.stringify(formData);
+    const submitData = JSON.stringify(pages);
     const blob = new Blob([submitData], { type: "text/plain" });
     const url = URL.createObjectURL(blob);
     const link = document.createElement("a");
@@ -158,26 +65,6 @@ const FormBuilder = (props) => {
       console.log(newForm);
       setFormData(newForm);
     };
-  }
-
-  /* Handle emailing data */
-  function handleSubmit() {
-    alert(
-      "Please remember to attach any additional documents to the email before sending"
-    );
-    const emailBody = formData.map((form) => {
-      if (form.listType !== "fieldset") {
-        return `%0A%0A ${form.formtitle}: %0A%0A ${form.formText}`;
-      } else {
-        const subForm = form["list"].map((subform) => {
-          return `%0A%0A ${subform.formtitle}: %0A%0A ${subform.formText}`;
-        });
-        return `%0A%0A ${form.legend} ${subForm}`;
-      }
-    });
-
-    const mailto = `mailto:mail@gmail.com?subject=WRBLO Preliminary submit form&body=${emailBody}`;
-    window.location.href = mailto;
   }
 
   const formItems = formData.map((form) => {
@@ -247,19 +134,6 @@ const FormBuilder = (props) => {
           reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
           pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
           culpa qui officia deserunt mollit anim id est laborum.
-        </div>
-        <div
-          className="submit-button"
-          style={{
-            width: "20vw",
-            cursor: "pointer",
-            color: "white",
-            backgroundColor: "#c29f48",
-            fontWeight: "600",
-          }}
-          onClick={handleSubmit}
-        >
-          <p>Submit the WRBLO Preliminary Application</p>
         </div>
       </div>
       <div
