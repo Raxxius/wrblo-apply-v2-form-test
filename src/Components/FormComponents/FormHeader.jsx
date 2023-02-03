@@ -7,6 +7,10 @@ export default function FormHeader(props) {
       <div className="submit-button">
             Form submit button
       </div>
+      <div className="page-selector">
+          Page selector
+          <div>{props.pageNumber} of {props.numberOfPages}</div>
+      </div>
     </div>
   );
 }
