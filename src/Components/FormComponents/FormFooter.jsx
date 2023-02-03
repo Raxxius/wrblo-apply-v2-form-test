@@ -4,7 +4,7 @@ export default function FormFooter(props) {
     return (
 
         <div className="form-footer">
-            Form Footer go here
+            <button className="save-button">Save</button>
         </div>
     )
 }
