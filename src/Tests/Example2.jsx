@@ -130,61 +130,68 @@ const WRBLO_PRELIMINARY = {
         ],
       },
       {
-        id: "13",
-        listType: "textarea",
-        formtitle: "What is driving your Philanthropic call?",
-        formText: "",
-        maxCharacter: 1000,
-        helpButton:
-          "Increasingly WRBLO will want to see that there is evidence to prove that what you are applying for is needed in the community or location where you are applying. How can you prove it? Have you looked at national statistics and seen if your area performs above or below the national average? Have you conducted quantitative or qualitative surveys or other forms of feedback in your community to see what the residents say? To demonstrate the extent of the ‘need', it is often useful to cite statistics from a recognised source. So do some homework. Ask around. Find out what are the needs in your community and what is the evidence for it.",
-      },
-      {
-        id: "14",
-        listType: "textarea",
-        formtitle: "Track record",
-        formText: "",
-        maxCharacter: 1000,
-        helpButton:
-          "WRBLO will want to know a little bit about your history. We will want to determine if you have done similar work to that for which you are applying. What size/scale has your organisation been working to in the past? If WRBLO gave you this money, would you have the capacity and previous experience to implement the project as you propose? Giving a good background of your organisation relevant to the grant that you are applying for is what is required here.",
-      },
-      {
-        id: "15",
-        listType: "textarea",
-        formtitle: "Best evidence",
-        formText: "",
-        maxCharacter: 1000,
-      },
-      {
-        id: "16",
-        listType: "textarea",
-        formtitle: "M&E",
-        formText: "",
-        maxCharacter: 1000,
-        helpButton:
-          "WRBLO will want to know how successful (or not) investment in your project has been. At a minimum, we will ask for projects to be self-assessed. That is, we ask the applicant to state upfront how it plans to assess the project, collect the monitoring information and conduct the evaluation of the project. If the monitoring and evaluation processes are included at the project planning stage, this becomes much easier to answer. In addition to your internal monitoring and evaluation processes, WRBLO will act as an external evaluator to provide an independent eye.",
-      },
-      {
-        id: "17",
-        listType: "textarea",
-        formtitle: "Exit",
-        formText: "",
-        maxCharacter: 1000,
-      },
-      {
-        id: "18",
-        listType: "textarea",
-        formtitle: "Collaboration",
-        formText: "",
-        maxCharacter: 1000,
-      },
-      {
-        id: "19",
-        listType: "textarea",
-        formtitle: "Organisation development and ambation",
-        formText: "",
-        maxCharacter: 1000,
-        helpButton:
-          "When WRBLO asks if the project is sustainable we want to know how you will fund the project beyond the amount of money we agree to provide. You have 3 options: 1. that the project will finish at the end of the grant period 2. that the project will secure funding from other sources 3. that the project will generate its revenue through services/contract delivery etc.Don’t rely on other organisations to sustain your project for you. It would be unrealistic to state that you expect a statutory body to take on the funding of your project unless you have very strong evidence and commitments to that effect. You are best advised to demonstrate what you can realistically do within your resources to secure ongoing funding for the project and/or show how you can wind down the project in an orderly manner.",
+        id: "13a",
+        listType: "fieldset",
+        legend: "",
+        list: [
+          {
+            id: "13",
+            listType: "textarea",
+            formtitle: "What is driving your Philanthropic call?",
+            formText: "",
+            maxCharacter: 1000,
+            helpButton:
+              "Increasingly WRBLO will want to see that there is evidence to prove that what you are applying for is needed in the community or location where you are applying. How can you prove it? Have you looked at national statistics and seen if your area performs above or below the national average? Have you conducted quantitative or qualitative surveys or other forms of feedback in your community to see what the residents say? To demonstrate the extent of the ‘need', it is often useful to cite statistics from a recognised source. So do some homework. Ask around. Find out what are the needs in your community and what is the evidence for it.",
+          },
+          {
+            id: "14",
+            listType: "textarea",
+            formtitle: "Track record",
+            formText: "",
+            maxCharacter: 1000,
+            helpButton:
+              "WRBLO will want to know a little bit about your history. We will want to determine if you have done similar work to that for which you are applying. What size/scale has your organisation been working to in the past? If WRBLO gave you this money, would you have the capacity and previous experience to implement the project as you propose? Giving a good background of your organisation relevant to the grant that you are applying for is what is required here.",
+          },
+          {
+            id: "15",
+            listType: "textarea",
+            formtitle: "Best evidence",
+            formText: "",
+            maxCharacter: 1000,
+          },
+          {
+            id: "16",
+            listType: "textarea",
+            formtitle: "M&E",
+            formText: "",
+            maxCharacter: 1000,
+            helpButton:
+              "WRBLO will want to know how successful (or not) investment in your project has been. At a minimum, we will ask for projects to be self-assessed. That is, we ask the applicant to state upfront how it plans to assess the project, collect the monitoring information and conduct the evaluation of the project. If the monitoring and evaluation processes are included at the project planning stage, this becomes much easier to answer. In addition to your internal monitoring and evaluation processes, WRBLO will act as an external evaluator to provide an independent eye.",
+          },
+          {
+            id: "17",
+            listType: "textarea",
+            formtitle: "Exit",
+            formText: "",
+            maxCharacter: 1000,
+          },
+          {
+            id: "18",
+            listType: "textarea",
+            formtitle: "Collaboration",
+            formText: "",
+            maxCharacter: 1000,
+          },
+          {
+            id: "19",
+            listType: "textarea",
+            formtitle: "Organisation development and ambation",
+            formText: "",
+            maxCharacter: 1000,
+            helpButton:
+              "When WRBLO asks if the project is sustainable we want to know how you will fund the project beyond the amount of money we agree to provide. You have 3 options: 1. that the project will finish at the end of the grant period 2. that the project will secure funding from other sources 3. that the project will generate its revenue through services/contract delivery etc.Don’t rely on other organisations to sustain your project for you. It would be unrealistic to state that you expect a statutory body to take on the funding of your project unless you have very strong evidence and commitments to that effect. You are best advised to demonstrate what you can realistically do within your resources to secure ongoing funding for the project and/or show how you can wind down the project in an orderly manner.",
+          },
+        ],
       },
     ],
     [
