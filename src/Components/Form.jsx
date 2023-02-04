@@ -4,6 +4,7 @@ import FormHeader from "./FormComponents/FormHeader";
 import FormFooter from "./FormComponents/FormFooter";
 import { useState } from "react";
 import { parseData, handlePageChange } from "../Functions/formFunctions";
+import { useEffect } from "react";
 
 export default function Form() {
   /* datafetch */
@@ -14,6 +15,10 @@ export default function Form() {
   const [pageNumber, setPageNumber] = useState(3);
   const [displayedPage, setDisplayedPage] = useState(pages[pageNumber-1])
   console.log(displayedPage)
+ 
+  useEffect(() => {
+    setDisplayedPage(pages[pageNumber-1])
+  }, [pageNumber])
 
   return (
     <>
