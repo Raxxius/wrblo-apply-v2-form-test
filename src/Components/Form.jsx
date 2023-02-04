@@ -14,7 +14,6 @@ export default function Form() {
   const [formIntro, numberOfPages, pages] = parseData(DATA);
   const [pageNumber, setPageNumber] = useState(3);
   const [displayedPage, setDisplayedPage] = useState(pages[pageNumber-1])
-  console.log(displayedPage)
  
   useEffect(() => {
     setDisplayedPage(pages[pageNumber-1])
