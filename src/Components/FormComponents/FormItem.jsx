@@ -11,9 +11,9 @@ const FormItem = (props) => {
     formText,
     maxCharacter,
     helpButton,
-    displayedPage,
     setFormData,
     handleFormChange,
+    pageNumber,
   } = props;
 
     const value = formText
@@ -34,7 +34,7 @@ const FormItem = (props) => {
       id={id}
       type={listType}
       maxLength={maxCharacter}
-      onChange={(e) => handleFormChange(e, setFormData)}
+      onChange={(e) => handleFormChange(e, setFormData, pageNumber)}
       value={value}
       style={{
         width: "40vw",
@@ -52,7 +52,7 @@ const FormItem = (props) => {
         id={id}
         type={listType}
         maxLength={maxCharacter}
-        onChange={(e) => handleFormChange(e, setFormData)}
+        onChange={(e) => handleFormChange(e, setFormData, pageNumber)}
         value={value}
         style={{
           width: "40vw",

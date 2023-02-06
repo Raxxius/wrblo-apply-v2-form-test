@@ -79,35 +79,40 @@ export function handleSubmit(pages) {
  *
  **/
 
-export function handleFormChange(event, setFormData) {
-
-    console.log("handle form change")
-  // setFormData((prevFormData) => {
-  //   let newFormData = []
-  //   for (let i = 0; i < prevFormData.length; i++) {
-  //     newFormData[i] = prevFormData[i].map((form) => {
-  //       if (form.id === event.target.id) {
-  //         return { ...form, formText: event.target.value };
-  //       } else if (form.listType === "fieldset") {
-  //         const subFormData = form["list"].map((subform) => {
-  //           if (subform.id === event.target.id)
-  //             return { ...subform, formText: event.target.value };
-  //           return subform;
-  //         });
-  //         return { ...form, list: subFormData };
-  //       }
-  //       return form;
-  //     });
-  //   }
-  //   return newFormData
-  // });
+export function handleFormChange(event, setFormData, pageNumber) {
+  setFormData((prevFormData) => {
+    console.log("state change")
+    /** selects the page being changed */
+    let newFormDataValue = prevFormData.formList[pageNumber - 1];
+    let newFormData = [];
+    /** maps through the form for the event id and changes the value if it's changed */
+    newFormData = newFormDataValue.map((form) => {
+      if (form.id === event.target.id) {
+        return { ...form, formText: event.target.value };
+      } else if (form.listType === "fieldset") {
+        /** if fieldset is used, then sublists the fieldset form */
+        const subFormData = form["list"].map((subform) => {
+          if (subform.id === event.target.id) {
+            return { ...subform, formText: event.target.value };
+          }
+          return subform;
+        });
+        return { ...form, list: subFormData };
+      }
+      return form;
+    });
+    console.log(prevFormData)
+    let returnValue = {...prevFormData};
+    returnValue.formList[pageNumber - 1] = newFormData
+    return returnValue;
+  });
 }
 
-  /** Current alert, to be fleshed out to a modal */
+/** Current alert, to be fleshed out to a modal */
 
-  export function handleHelpButton(helpButton) {
-    alert(helpButton)
-  }
+export function handleHelpButton(helpButton) {
+  alert(helpButton);
+}
 
 /* Handle Save
  * To be updated

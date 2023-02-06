@@ -49,8 +49,8 @@ const FormBuilder = (props) => {
             key={subform.id}
             {...subform}
             setFormData={setFormData}
-            value={subform.formText}
             handleFormChange={handleFormChange}
+            pageNumber={pageNumber}
           />
         );
       });
@@ -74,8 +74,8 @@ const FormBuilder = (props) => {
           key={form.id}
           {...form}
           setFormData={setFormData}
-          value={form.formText}
           handleFormChange={handleFormChange}
+          pageNumber={pageNumber}
         />
       );
     }
