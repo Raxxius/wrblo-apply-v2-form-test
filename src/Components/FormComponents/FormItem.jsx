@@ -1,19 +1,28 @@
+import { handleHelpButton } from '../../Functions/formFunctions'
 
 /** indivdual form component */
 
 const FormItem = (props) => {
   /** props deconstruction */
-  const {displayedPage, setFormData, handleFormChange} = props
-
-
-  
+  const {
+    id,
+    listType,
+    formTitle,
+    formText,
+    maxCharacter,
+    helpButton,
+    value,
+    displayedPage,
+    setFormData,
+    handleFormChange,
+  } = props;
 
   /** If a help button is in the form data, adds one, else doesn't render */
-  let helpButton = "";
+  let helpButtonDiv = ""
 
-  if (props.helpButton != undefined) {
-    helpButton = (
-      <button className="help" onClick={handleHelpButton}>
+  if (helpButton != undefined) {
+    helpButtonDiv = (
+      <button className="help" onClick={() => handleHelpButton(helpButton)}>
         ?
       </button>
     );
@@ -21,11 +30,11 @@ const FormItem = (props) => {
 
   let input = (
     <input
-      id={props.id}
-      type={props.listType}
-      maxLength={props.maxCharacter}
-      onChange={props.handleFormChange(props.setFormData)}
-      value={props.value}
+      id={id}
+      type={listType}
+      maxLength={maxCharacter}
+      onChange={() => handleFormChange(setFormData)}
+      value={value}
       style={{
         width: "40vw",
         textAlign: "left",
@@ -36,14 +45,14 @@ const FormItem = (props) => {
 
   /** Overwrites the default input box with a
    * text area box if the list item is defined "textarea" */
-  if (props.listType === "textarea") {
+  if (listType === "textarea") {
     input = (
       <textarea
-        id={props.id}
-        type={props.listType}
-        maxLength={props.maxCharacter}
-        onChange={props.handleFormChange(props.setFormData)}
-        value={props.value}
+        id={id}
+        type={listType}
+        maxLength={maxCharacter}
+        onChange={() => handleFormChange(setFormData)}
+        value={value}
         style={{
           width: "40vw",
           textAlign: "left",
@@ -53,12 +62,6 @@ const FormItem = (props) => {
       ></textarea>
     );
   }
-
-  /** Current alert, to be fleshed out to a modal */
-  function handleHelpButton() {
-    alert(props.helpButton);
-  }
-
 
 
   /** core return */
@@ -73,7 +76,7 @@ const FormItem = (props) => {
     >
       <label
         className="form"
-        htmlFor={props.id}
+        htmlFor={id}
         style={{
           width: "20vw",
           textAlign: "left",
@@ -81,10 +84,10 @@ const FormItem = (props) => {
           paddingRight: "5vw",
         }}
       >
-        {props.formtitle}
+        {formTitle}
       </label>
       {input}
-      {helpButton}
+      {helpButtonDiv}
     </div>
   );
 };

@@ -8,7 +8,7 @@ import FormItem from "./FormItem";
  * {
  * id: 'str'
  * listType: 'str',
- * formtitle: '{title of form}'
+ * formTitle: '{title of form}'
  * formText: '{User input text}'
  * maxCharacter: '{max number of characters in the input}
  * }
@@ -48,7 +48,6 @@ const FormBuilder = (props) => {
           <FormItem
             key={subform.id}
             {...subform}
-            formData={formData}
             setFormData={setFormData}
             value={subform.formText}
             handleFormChange={handleFormChange}
@@ -74,9 +73,9 @@ const FormBuilder = (props) => {
         <FormItem
           key={form.id}
           {...form}
-          formData={formData}
           setFormData={setFormData}
           value={form.formText}
+          handleFormChange={handleFormChange}
         />
       );
     }
@@ -137,7 +136,7 @@ const FormBuilder = (props) => {
             <input
               type="file"
               name="load"
-              formtitle="Load from Text file"
+              formTitle="Load from Text file"
               onChange={handleLoad}
             />
           </div>

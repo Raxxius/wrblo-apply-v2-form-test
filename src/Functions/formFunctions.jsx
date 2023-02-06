@@ -103,6 +103,11 @@ export function handleFormChange(event, setFormData) {
   // });
 }
 
+  /** Current alert, to be fleshed out to a modal */
+  export function handleHelpButton(helpButton) {
+    alert(helpButton)
+  }
+
 /* Handle Save
  * To be updated
  */
