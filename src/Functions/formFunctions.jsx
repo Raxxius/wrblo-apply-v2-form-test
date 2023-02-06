@@ -75,8 +75,12 @@ export function handleSubmit(pages) {
 
 /* Handle Form updates
  *
- * Reponse to keypress event inputing data to form
+ * Reponse to keystroke 'event' when user is inputing data to form
  *
+ * input = keystroke event, setFormData state function and pageNumber
+ * 
+ * output = statechange(formData) event 
+ * 
  **/
 
 export function handleFormChange(event, setFormData, pageNumber) {
