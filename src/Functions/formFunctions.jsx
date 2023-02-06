@@ -81,7 +81,6 @@ export function handleSubmit(pages) {
 
 export function handleFormChange(event, setFormData, pageNumber) {
   setFormData((prevFormData) => {
-    console.log("state change")
     /** selects the page being changed */
     let newFormDataValue = prevFormData.formList[pageNumber - 1];
     let newFormData = [];
@@ -101,7 +100,6 @@ export function handleFormChange(event, setFormData, pageNumber) {
       }
       return form;
     });
-    console.log(prevFormData)
     let returnValue = {...prevFormData};
     returnValue.formList[pageNumber - 1] = newFormData
     return returnValue;
