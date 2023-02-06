@@ -2,6 +2,7 @@ import { handleSubmit } from "../../Functions/formFunctions";
 
 export default function FormHeader(props) {
   /** props deconstruction */
+
   const {
     formIntro,
     pageNumber,
@@ -25,24 +26,14 @@ export default function FormHeader(props) {
         <div
           className="prev-page"
           onClick={() =>
-            props.handlePageChange(
-              "prev",
-              setPageNumber,
-              numberOfPages
-            )
+            props.handlePageChange("prev", setPageNumber, numberOfPages)
           }
         >
           Prev Page
         </div>
         <div
           className="next-page"
-          onClick={() =>
-            handlePageChange(
-              "next",
-              setPageNumber,
-              numberOfPages
-            )
-          }
+          onClick={() => handlePageChange("next", setPageNumber, numberOfPages)}
         >
           Next Page
         </div>

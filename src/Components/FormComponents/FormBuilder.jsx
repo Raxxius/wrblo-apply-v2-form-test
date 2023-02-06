@@ -1,9 +1,7 @@
-import FormItem from './FormItem'
+import FormItem from "./FormItem";
 
 /**
- * format =
- *
- * expected data input from JSON
+ * format = expected data input from JSON
  *
  * array of list item:
  *
@@ -26,12 +24,12 @@ import FormItem from './FormItem'
  *
  */
 
-
 /* core form builder */
+
 const FormBuilder = (props) => {
-  const formData = props.formData
-  const setFormData = props.setFormData
-  console.log(formData)
+  /** props deconstruction */
+
+  const { pageNumber, formData, setFormData, handleFormChange } = props;
 
   /* Style variables */
   const style = {
@@ -42,32 +40,8 @@ const FormBuilder = (props) => {
     padding: "20px",
   };
 
-  /* Handle Save */
-  function handleSave(pages) {
-    alert("saving application form");
-    const submitData = JSON.stringify(pages);
-    const blob = new Blob([submitData], { type: "text/plain" });
-    const url = URL.createObjectURL(blob);
-    const link = document.createElement("a");
-    link.download = "form-data.txt";
-    link.href = url;
-    link.click();
-  }
-
-  /* Handle loading data from a text file */
-  function handleLoad(e) {
-    let file = e.target.files[0];
-    let reader = new FileReader();
-    reader.readAsText(file);
-    console.log(e.target.files[0]);
-    reader.onload = function () {
-      let newForm = JSON.parse(reader.result);
-      console.log(newForm);
-      setFormData(newForm);
-    };
-  }
-
-  const formItems = formData.map((form) => {
+  /* creates an array 'formItems' that Maps data from the formData*/
+  const formItems = formData.formList[pageNumber-1].map((form) => {
     if (form.listType === "fieldset") {
       const subFormItems = form.list.map((subform) => {
         return (
@@ -77,6 +51,7 @@ const FormBuilder = (props) => {
             formData={formData}
             setFormData={setFormData}
             value={subform.formText}
+            handleFormChange={handleFormChange}
           />
         );
       });
@@ -117,7 +92,7 @@ const FormBuilder = (props) => {
           display: "flex",
           justifyContent: "space-between",
           alignItems: "center",
-          marginBottom: "20px"
+          marginBottom: "20px",
         }}
       >
         <div
@@ -126,15 +101,7 @@ const FormBuilder = (props) => {
             width: "45vw",
             textAlign: "left",
           }}
-        >
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.
-        </div>
+        ></div>
       </div>
       <div
         className="form-content"
@@ -145,7 +112,7 @@ const FormBuilder = (props) => {
         }}
       >
         {formItems}
-        <div
+        {/* <div
           className="save-load-button"
           style={{
             display: "flex",
@@ -189,7 +156,7 @@ const FormBuilder = (props) => {
           >
             Save Form
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );
