@@ -11,11 +11,12 @@ const FormItem = (props) => {
     formText,
     maxCharacter,
     helpButton,
-    value,
     displayedPage,
     setFormData,
     handleFormChange,
   } = props;
+
+    const value = formText
 
   /** If a help button is in the form data, adds one, else doesn't render */
   let helpButtonDiv = ""
@@ -33,7 +34,7 @@ const FormItem = (props) => {
       id={id}
       type={listType}
       maxLength={maxCharacter}
-      onChange={() => handleFormChange(setFormData)}
+      onChange={(e) => handleFormChange(e, setFormData)}
       value={value}
       style={{
         width: "40vw",
@@ -51,7 +52,7 @@ const FormItem = (props) => {
         id={id}
         type={listType}
         maxLength={maxCharacter}
-        onChange={() => handleFormChange(setFormData)}
+        onChange={(e) => handleFormChange(e, setFormData)}
         value={value}
         style={{
           width: "40vw",

@@ -4,7 +4,6 @@ import FormHeader from "./FormComponents/FormHeader";
 import FormFooter from "./FormComponents/FormFooter";
 import { useState } from "react";
 import { parseData, handlePageChange, handleFormChange } from "../Functions/formFunctions";
-import { useEffect } from "react";
 
 export default function Form() {
   /* datafetch */

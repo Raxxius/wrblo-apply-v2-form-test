@@ -26,7 +26,7 @@ export default function FormHeader(props) {
         <div
           className="prev-page"
           onClick={() =>
-            props.handlePageChange("prev", setPageNumber, numberOfPages)
+            handlePageChange("prev", setPageNumber, numberOfPages)
           }
         >
           Prev Page
