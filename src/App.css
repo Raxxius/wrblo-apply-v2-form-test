@@ -1,7 +1,23 @@
 body {
-    font-family: Roboto, Roboto Slab, "Roboto";
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  line-height: 26px;
+  color: #888;
+  font-weight: 400;
+  background-color: #fff;
+  overflow-x: hidden !important;
+  -webkit-font-smoothing: antialiased;
 }
 
 .main-header {
-    text-align: center;
+  height: 90px;
+  text-align: center;
+  border-bottom: 1px solid black;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  color: #262353;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
