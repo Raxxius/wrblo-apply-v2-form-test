@@ -1,6 +1,7 @@
 import { handleSave, handleLoad } from '../../Functions/formFunctions'
 
 export default function FormFooter(props) {
+  const { formData, setFormData } = props
   return (
     <div className="form-footer">
       <div
@@ -29,7 +30,7 @@ export default function FormFooter(props) {
             type="file"
             name="load"
             formlegend="Load from Text file"
-            onChange={handleLoad}
+            onChange={(e) => handleLoad(e, setFormData)}
           />
         </div>
         <div
@@ -43,7 +44,7 @@ export default function FormFooter(props) {
             marginTop: "15px",
             marginRight: "0",
           }}
-          onClick={handleSave}
+          onClick={() => handleSave(formData)}
         >
           Save Form
         </div>

@@ -47,6 +47,7 @@ const FormBuilder = (props) => {
       });
       return (
         <fieldset key={form.id}>
+          {/** displays form legend if present*/}
           {form.legend !==  "" 
           ?
           <legend className="form-legend">{form.legend}</legend>

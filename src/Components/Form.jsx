@@ -3,7 +3,11 @@ import FormBuilder from "./FormComponents/FormBuilder";
 import FormHeader from "./FormComponents/FormHeader";
 import FormFooter from "./FormComponents/FormFooter";
 import { useState } from "react";
-import { parseData, handlePageChange, handleFormChange } from "../Functions/formFunctions";
+import {
+  parseData,
+  handlePageChange,
+  handleFormChange,
+} from "../Functions/formFunctions";
 
 export default function Form() {
   /* datafetch */
@@ -11,7 +15,7 @@ export default function Form() {
   const [formIntro, numberOfPages, pages] = parseData(DATA);
 
   /* state management */
-  const [formData, setFormData] = useState(DATA)
+  const [formData, setFormData] = useState(DATA);
   const [pageNumber, setPageNumber] = useState(1);
 
   return (
@@ -24,13 +28,13 @@ export default function Form() {
         setPageNumber={setPageNumber}
         pages={pages}
       />
-      <FormBuilder 
+      <FormBuilder
         pageNumber={pageNumber}
         formData={formData}
         setFormData={setFormData}
         handleFormChange={handleFormChange}
       />
-      <FormFooter />
+      <FormFooter formData={formData} setFormData={setFormData} />
     </>
   );
 }

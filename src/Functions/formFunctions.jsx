@@ -133,13 +133,12 @@ export function handleSave(form) {
 /* Handle loading data from a text file
  * To be updated
  */
-export function handleLoad(e) {
+export function handleLoad(e, setFormData) {
   let file = e.target.files[0];
   let reader = new FileReader();
   reader.readAsText(file);
-  console.log(e.target.files[0]);
   reader.onload = function () {
     let newForm = JSON.parse(reader.result);
-    console.log(newForm);
+    setFormData(newForm);
   };
 }
