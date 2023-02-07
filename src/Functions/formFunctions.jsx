@@ -119,28 +119,27 @@ export function handleHelpButton(helpButton) {
 /* Handle Save
  * To be updated
  */
-// export function handleSave(form) {
-//   alert("saving application form");
-//   const submitData = JSON.stringify(form);
-//   const blob = new Blob([submitData], { type: "text/plain" });
-//   const url = URL.createObjectURL(blob);
-//   const link = document.createElement("a");
-//   link.download = "form-data.txt";
-//   link.href = url;
-//   link.click();
-// }
+export function handleSave(form) {
+  alert("saving application form");
+  const submitData = JSON.stringify(form);
+  const blob = new Blob([submitData], { type: "text/plain" });
+  const url = URL.createObjectURL(blob);
+  const link = document.createElement("a");
+  link.download = "form-data.txt";
+  link.href = url;
+  link.click();
+}
 
 /* Handle loading data from a text file
  * To be updated
  */
-// export function handleLoad(e) {
-//   let file = e.target.files[0];
-//   let reader = new FileReader();
-//   reader.readAsText(file);
-//   console.log(e.target.files[0]);
-//   reader.onload = function () {
-//     let newForm = JSON.parse(reader.result);
-//     console.log(newForm);
-//     setFormData(newForm);
-//   };
-// }
+export function handleLoad(e) {
+  let file = e.target.files[0];
+  let reader = new FileReader();
+  reader.readAsText(file);
+  console.log(e.target.files[0]);
+  reader.onload = function () {
+    let newForm = JSON.parse(reader.result);
+    console.log(newForm);
+  };
+}

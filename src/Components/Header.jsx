@@ -1,8 +1,8 @@
 
 export default function Form() {
     return (
-        <div>
-            Header goes here
+        <div className="main-header">
+            WRBLO Preliminary Application
         </div>
     )
 }
