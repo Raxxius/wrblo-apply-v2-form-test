@@ -13,29 +13,34 @@ export default function FormHeader(props) {
   } = props;
 
   return (
-    <div className="form-footer">
+    <div className="form-header">
       <div className="form-intro">{formIntro}</div>
-      <div className="submit-button" onClick={() => handleSubmit(pages)}>
-        Form submit button
-      </div>
-      <div className="page-selector">
-        Page selector
-        <div>
-          {pageNumber} of {numberOfPages}
-        </div>
-        <div
-          className="prev-page"
-          onClick={() =>
-            handlePageChange("prev", setPageNumber, numberOfPages)
-          }
-        >
-          Prev Page
-        </div>
-        <div
-          className="next-page"
-          onClick={() => handlePageChange("next", setPageNumber, numberOfPages)}
-        >
-          Next Page
+      <div className="form-navigation">
+        <button className="submit-button" onClick={() => handleSubmit(pages)}>
+          Submit the WRBLO Preliminary Application
+        </button>
+        <div className="page-selector">
+          <div className="page-number">
+            Page {pageNumber} of {numberOfPages}
+          </div>
+          <div className="button-box">
+            <button
+              className="prev-page, page-button"
+              onClick={() =>
+                handlePageChange("prev", setPageNumber, numberOfPages)
+              }
+            >
+              Prev Page
+            </button>
+            <button
+              className="next-page, page-button"
+              onClick={() =>
+                handlePageChange("next", setPageNumber, numberOfPages)
+              }
+            >
+              Next Page
+            </button>
+          </div>
         </div>
       </div>
     </div>
