@@ -40,6 +40,7 @@ body {
     width: 50vw;
     margin-right: 10vw;
     margin-left: 5vw;
+    margin-bottom: 30px;
 }
 
 .submit-button {
@@ -64,6 +65,7 @@ body {
     align-content: center;
     align-items: center;
     margin-top: 20px;
+    margin-bottom: 30px;
 }
 
 .page-number {
@@ -79,4 +81,78 @@ body {
 
 .page-button:hover {
     font-weight: 600;
+}
+
+/** Form styling */
+
+.form-box {
+    background-color: #e6edf0;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.header-box {
+    margin-top: 30px;
+}
+
+.form-content {
+    text-align: center;
+}
+
+.form-legend {
+    color: #fff;
+    background-color: #262353;
+    padding: 5px 30px;
+}
+
+.form-item {
+    display: flex;
+    flex-direction: row;
+}
+
+.form {
+    width: 450px;
+    text-align: left;
+    margin-left: 50px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    color: black;
+}
+
+fieldset {
+    background-color: #fff;
+    border: 1px solid #262353;
+    width: 1200px;
+    display: flex;
+    flex-direction: column;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    margin-bottom: 40px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+textarea {
+    margin-top: 2px;
+    margin-bottom: 2px;
+    width: 670px;
+    height: 100px;
+}
+
+input {
+    margin-top: 2px;
+    margin-bottom: 2px;
+    width: 670px;
+}
+
+.form-help-button {
+    cursor: pointer;
+    color: #888;
+    font-weight: 600;
+    border-radius: 50%;
+    border: 2px solid darkgray;
+    height: 25px;
+    width: 25px;
+    margin-top: 3px;
+    margin-left: 15px;
 }

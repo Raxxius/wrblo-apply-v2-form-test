@@ -60,10 +60,10 @@ export function handleSubmit(pages) {
   );
   const emailBody = formData.map((form) => {
     if (form.listType !== "fieldset") {
-      return `%0A%0A ${form.formtitle}: %0A%0A ${form.formText}`;
+      return `%0A%0A ${form.formlegend}: %0A%0A ${form.formText}`;
     } else {
       const subForm = form["list"].map((subform) => {
-        return `%0A%0A ${subform.formtitle}: %0A%0A ${subform.formText}`;
+        return `%0A%0A ${subform.formlegend}: %0A%0A ${subform.formText}`;
       });
       return `%0A%0A ${form.legend} ${subForm}`;
     }

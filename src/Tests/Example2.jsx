@@ -12,7 +12,7 @@ const WRBLO_PRELIMINARY = {
           {
             id: "1A",
             listType: "text",
-            formTitle: "Organisation Name",
+            formlegend: "Organisation Name",
             formText: "",
             maxCharacter: 150,
             helpButton: `The first and usually the easiest part of the application asks for the applicant group's name, address, and telephone/fax numbers. However, WRBLO will expect the most senior person or chairperson to be the designated contact for signing contracts etc if you are successful be sure to have someone who can sign the application on the organisation’s behalf listed as the key contact.`,
@@ -20,42 +20,42 @@ const WRBLO_PRELIMINARY = {
           {
             id: "1B",
             listType: "text",
-            formTitle: "Organisation Legal status",
+            formlegend: "Organisation Legal status",
             formText: "",
             maxCharacter: 150,
           },
           {
             id: "1C",
             listType: "text",
-            formTitle: "Organisation Registration details",
+            formlegend: "Organisation Registration details",
             formText: "",
             maxCharacter: 150,
           },
           {
             id: "1D",
             listType: "text",
-            formTitle: "Lead Contact",
+            formlegend: "Lead Contact",
             formText: "",
             maxCharacter: 150,
           },
           {
             id: "1E",
             listType: "email",
-            formTitle: "Email Address",
+            formlegend: "Email Address",
             formText: "",
             maxCharacter: 150,
           },
           {
             id: "1F",
             listType: "text",
-            formTitle: "How did you hear about WRBLO?",
+            formlegend: "How did you hear about WRBLO?",
             formText: "",
             maxCharacter: 150,
           },
           {
             id: "1G",
             listType: "textarea",
-            formTitle: "Address",
+            formlegend: "Address",
             formText: "",
             maxCharacter: 250,
           },
@@ -69,7 +69,7 @@ const WRBLO_PRELIMINARY = {
           {
             id: "5",
             listType: "text",
-            formTitle: "Amount of funding requested, including currency",
+            formlegend: "Amount of funding requested, including currency",
             formText: "",
             maxCharacter: 150,
             helpButton:
@@ -78,28 +78,28 @@ const WRBLO_PRELIMINARY = {
           {
             id: "6",
             listType: "text",
-            formTitle: "Duration",
+            formlegend: "Duration",
             formText: "",
             maxCharacter: 150,
           },
           {
             id: "7",
             listType: "text",
-            formTitle: "Project location",
+            formlegend: "Project location",
             formText: "",
             maxCharacter: 150,
           },
           {
             id: "8",
             listType: "text",
-            formTitle: "Livelihood opportunity",
+            formlegend: "Livelihood opportunity",
             formText: "",
             maxCharacter: 150,
           },
           {
             id: "9",
             listType: "text",
-            formTitle: "Funding Status",
+            formlegend: "Funding Status",
             formText: "",
             maxCharacter: 150,
           },
@@ -115,7 +115,7 @@ const WRBLO_PRELIMINARY = {
           {
             id: "11",
             listType: "textarea",
-            formTitle: "Who are the Beneficiaries?",
+            formlegend: "Who are the Beneficiaries?",
             formText: "",
             maxCharacter: 1000,
             helpButton:
@@ -124,7 +124,7 @@ const WRBLO_PRELIMINARY = {
           {
             id: "12",
             listType: "textarea",
-            formTitle: "Measureable impact",
+            formlegend: "Measureable impact",
             formText: "",
             maxCharacter: 1000,
           },
@@ -138,7 +138,7 @@ const WRBLO_PRELIMINARY = {
           {
             id: "13",
             listType: "textarea",
-            formTitle: "What is driving your Philanthropic call?",
+            formlegend: "What is driving your Philanthropic call?",
             formText: "",
             maxCharacter: 1000,
             helpButton:
@@ -147,7 +147,7 @@ const WRBLO_PRELIMINARY = {
           {
             id: "14",
             listType: "textarea",
-            formTitle: "Track record",
+            formlegend: "Track record",
             formText: "",
             maxCharacter: 1000,
             helpButton:
@@ -156,14 +156,14 @@ const WRBLO_PRELIMINARY = {
           {
             id: "15",
             listType: "textarea",
-            formTitle: "Best evidence",
+            formlegend: "Best evidence",
             formText: "",
             maxCharacter: 1000,
           },
           {
             id: "16",
             listType: "textarea",
-            formTitle: "M&E",
+            formlegend: "M&E",
             formText: "",
             maxCharacter: 1000,
             helpButton:
@@ -172,21 +172,21 @@ const WRBLO_PRELIMINARY = {
           {
             id: "17",
             listType: "textarea",
-            formTitle: "Exit",
+            formlegend: "Exit",
             formText: "",
             maxCharacter: 1000,
           },
           {
             id: "18",
             listType: "textarea",
-            formTitle: "Collaboration",
+            formlegend: "Collaboration",
             formText: "",
             maxCharacter: 1000,
           },
           {
             id: "19",
             listType: "textarea",
-            formTitle: "Organisation development and ambation",
+            formlegend: "Organisation development and ambation",
             formText: "",
             maxCharacter: 1000,
             helpButton:
@@ -204,35 +204,35 @@ const WRBLO_PRELIMINARY = {
           {
             id: "21",
             listType: "text",
-            formTitle: "Income",
+            formlegend: "Income",
             formText: "",
             maxCharacter: 150,
           },
           {
             id: "22",
             listType: "text",
-            formTitle: "Funds/reserves/savings",
+            formlegend: "Funds/reserves/savings",
             formText: "",
             maxCharacter: 150,
           },
           {
             id: "23",
             listType: "text",
-            formTitle: "Expenditure",
+            formlegend: "Expenditure",
             formText: "",
             maxCharacter: 150,
           },
           {
             id: "24",
             listType: "text",
-            formTitle: "Reserves policy",
+            formlegend: "Reserves policy",
             formText: "",
             maxCharacter: 150,
           },
           {
             id: "25",
             listType: "text",
-            formTitle: "Currency",
+            formlegend: "Currency",
             formText: "",
             maxCharacter: 150,
           },

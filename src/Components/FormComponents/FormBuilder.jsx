@@ -8,7 +8,7 @@ import FormItem from "./FormItem";
  * {
  * id: 'str'
  * listType: 'str',
- * formTitle: '{title of form}'
+ * formlegend: '{title of form}'
  * formText: '{User input text}'
  * maxCharacter: '{max number of characters in the input}
  * }
@@ -31,17 +31,8 @@ const FormBuilder = (props) => {
 
   const { pageNumber, formData, setFormData, handleFormChange } = props;
 
-  /* Style variables */
-  const style = {
-    display: "flex",
-    flexDirection: "column",
-    justifyContent: "center",
-    alignItems: "center",
-    padding: "20px",
-  };
-
   /* creates an array 'formItems' that Maps data from the formData*/
-  const formItems = formData.formList[pageNumber-1].map((form) => {
+  const formItems = formData.formList[pageNumber - 1].map((form) => {
     if (form.listType === "fieldset") {
       const subFormItems = form.list.map((subform) => {
         return (
@@ -56,15 +47,11 @@ const FormBuilder = (props) => {
       });
       return (
         <fieldset key={form.id}>
-          <legend
-            style={{
-              color: "white",
-              backgroundColor: "darkblue",
-              padding: "5px",
-            }}
-          >
-            {form.legend}
-          </legend>
+          {form.legend !==  "" 
+          ?
+          <legend className="form-legend">{form.legend}</legend>
+          : 
+          ""}
           {subFormItems}
         </fieldset>
       );
@@ -83,35 +70,11 @@ const FormBuilder = (props) => {
 
   /* Core return render **/
   return (
-    <div className="form-box" style={style}>
-      <div
-        className="header-box"
-        style={{
-          width: "85vw",
-          display: "flex",
-          justifyContent: "space-between",
-          alignItems: "center",
-          marginBottom: "20px",
-        }}
-      >
-        <div
-          className="description"
-          style={{
-            width: "45vw",
-            textAlign: "left",
-          }}
-        ></div>
+    <div className="form-box">
+      <div className="header-box">
+        <div className="description"></div>
       </div>
-      <div
-        className="form-content"
-        style={{
-          backgroundColor: "#D3D3D3",
-          width: "100vw",
-          overflow: "hidden",
-        }}
-      >
-        {formItems}
-      </div>
+      <div className="form-content">{formItems}</div>
     </div>
   );
 };

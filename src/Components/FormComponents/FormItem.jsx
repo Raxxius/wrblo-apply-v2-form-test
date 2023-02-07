@@ -1,4 +1,4 @@
-import { handleHelpButton } from '../../Functions/formFunctions'
+import { handleHelpButton } from "../../Functions/formFunctions";
 
 /** indivdual form component */
 
@@ -7,7 +7,7 @@ const FormItem = (props) => {
   const {
     id,
     listType,
-    formTitle,
+    formlegend,
     formText,
     maxCharacter,
     helpButton,
@@ -16,14 +16,14 @@ const FormItem = (props) => {
     pageNumber,
   } = props;
 
-    const value = formText
+  const value = formText;
 
   /** If a help button is in the form data, adds one, else doesn't render */
-  let helpButtonDiv = ""
+  let helpButtonDiv = "";
 
   if (helpButton != undefined) {
     helpButtonDiv = (
-      <button className="help" onClick={() => handleHelpButton(helpButton)}>
+      <button className="form-help-button" onClick={() => handleHelpButton(helpButton)}>
         ?
       </button>
     );
@@ -36,11 +36,6 @@ const FormItem = (props) => {
       maxLength={maxCharacter}
       onChange={(e) => handleFormChange(e, setFormData, pageNumber)}
       value={value}
-      style={{
-        width: "40vw",
-        textAlign: "left",
-        paddingLeft: "5vw",
-      }}
     ></input>
   );
 
@@ -54,38 +49,15 @@ const FormItem = (props) => {
         maxLength={maxCharacter}
         onChange={(e) => handleFormChange(e, setFormData, pageNumber)}
         value={value}
-        style={{
-          width: "40vw",
-          textAlign: "left",
-          padding: "5px",
-          height: "150px",
-        }}
       ></textarea>
     );
   }
 
-
   /** core return */
   return (
-    <div
-      className="form_item"
-      style={{
-        display: "flex",
-        flexDirection: "row",
-        width: "80vw",
-      }}
-    >
-      <label
-        className="form"
-        htmlFor={id}
-        style={{
-          width: "20vw",
-          textAlign: "left",
-          paddingLeft: "5vw",
-          paddingRight: "5vw",
-        }}
-      >
-        {formTitle}
+    <div className="form-item">
+      <label className="form" htmlFor={id}>
+        {formlegend}
       </label>
       {input}
       {helpButtonDiv}

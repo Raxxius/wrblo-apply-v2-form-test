@@ -28,7 +28,7 @@ export default function FormFooter(props) {
           <input
             type="file"
             name="load"
-            formTitle="Load from Text file"
+            formlegend="Load from Text file"
             onChange={handleLoad}
           />
         </div>
