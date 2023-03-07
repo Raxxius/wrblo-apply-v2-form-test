@@ -156,6 +156,37 @@ input {
     margin-left: 15px;
 }
 
+/** Form modal styling */
+
+.modal-wrap {
+    position: fixed;
+    top: 90px;
+    height: 100%;
+    width: 100vw;
+    backdrop-filter: blur(5px);
+    color: black;    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.modal-text {
+    background-color: #fff;
+    width: 60vw;
+    margin-top: -22vh;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-close {
+   text-align: center;
+}
+
 /** Form footer styling */
 
 .form-footer {
