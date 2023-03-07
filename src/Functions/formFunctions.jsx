@@ -113,6 +113,9 @@ export function handleFormChange(event, setFormData, pageNumber) {
 /** Current alert, to be fleshed out to a modal */
 
 export function handleHelpButton(helpButton) {
+  return (
+    <div>{helpButton}</div>
+  )
   alert(helpButton);
 }
 

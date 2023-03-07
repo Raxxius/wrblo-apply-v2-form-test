@@ -2,7 +2,7 @@
   "name": "wrblo-apply-v2-form",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://raxxius.github.io/wrblo-apply-v2-form/",
+  "homepage": "https://raxxius.github.io/wrblo-apply-v2-form-test",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
