@@ -1,4 +1,5 @@
 import { handleHelpButton } from "../../Functions/formFunctions";
+import { Modal } from "../Modal"
 
 /** indivdual form component */
 
@@ -23,9 +24,12 @@ const FormItem = (props) => {
 
   if (helpButton != undefined) {
     helpButtonDiv = (
+      <>
       <button className="form-help-button" onClick={() => handleHelpButton(helpButton)}>
         ?
       </button>
+      <Modal />
+      </>
     );
   }
 
