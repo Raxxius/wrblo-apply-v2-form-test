@@ -112,8 +112,10 @@ export function handleFormChange(event, setFormData, pageNumber) {
 
 /** Current alert, to be fleshed out to a modal */
 
-export function handleHelpButton(helpButton) {
+export function handleHelpButton(helpButton, setModalActive, setModalText) {
   console.log("modal activated")
+  setModalActive(true)
+  setModalText(helpButton)
 }
 
 /* Handle Save

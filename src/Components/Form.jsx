@@ -2,6 +2,7 @@ import Example2 from "../Tests/Example2";
 import FormBuilder from "./FormComponents/FormBuilder";
 import FormHeader from "./FormComponents/FormHeader";
 import FormFooter from "./FormComponents/FormFooter";
+import Modal from "./Modal";
 import { useState } from "react";
 import {
   parseData,
@@ -17,6 +18,8 @@ export default function Form() {
   /* state management */
   const [formData, setFormData] = useState(DATA);
   const [pageNumber, setPageNumber] = useState(1);
+  const [modalActive, setModalActive] = useState(false);
+  const [modalText, setModalText] = useState("");
 
   return (
     <>
@@ -33,8 +36,16 @@ export default function Form() {
         formData={formData}
         setFormData={setFormData}
         handleFormChange={handleFormChange}
+        setModalActive={setModalActive}
+        setModalText={setModalText}
       />
       <FormFooter formData={formData} setFormData={setFormData} />
+      <Modal
+        modalActive={modalActive}
+        setModalActive={setModalActive}
+        modalText={modalText}
+        setModalText={setModalText}
+      />
     </>
   );
 }
