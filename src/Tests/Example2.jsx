@@ -1,7 +1,7 @@
 const WRBLO_PRELIMINARY = {
-  intro:
-    `<p>Welcome to the WRBLO preliminary Apply system.</p> <p>Please fill out the form and click apply to open an email (seperate email) to send the application to WRBLO.</p><p>If you require to `,
-  introModalText: '<h1>Advanced Considerations for your application to WRBLO<h1><p>1. Good Governance<p>',
+  intro: "<p>Welcome to the WRBLO preliminary Apply system.</p> <p>Please fill out the form and click apply to open an email (seperate email) to send the application to WRBLO.</p><p>If you require to ",
+  introModalText:
+    "<h1>Advanced Considerations for your application to WRBLO<h1><p>1. Good Governance<p>",
   numberOfPages: 3,
   formList: [
     [

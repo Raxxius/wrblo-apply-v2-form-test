@@ -1,4 +1,4 @@
-import Example2 from "../Tests/Example2";
+import Example from "../Tests/Example";
 import FormBuilder from "./FormComponents/FormBuilder";
 import FormHeader from "./FormComponents/FormHeader";
 import FormFooter from "./FormComponents/FormFooter";
@@ -12,8 +12,14 @@ import {
 
 export default function Form() {
   /* datafetch */
-  const DATA = Example2;
-  const [formIntro, numberOfPages, pages] = parseData(DATA);
+  const DATA = Example;
+  console.log(parseData(Example))
+  const [formIntro, introModalText, numberOfPages, pages] = parseData(DATA);
+
+  console.log(formIntro)
+  console.log(introModalText)
+  console.log(numberOfPages)
+  console.log(pages)
 
   /* state management */
   const [formData, setFormData] = useState(DATA);
@@ -30,6 +36,7 @@ export default function Form() {
         setModalText={setModalText}
       />
       <FormHeader
+        introModalText={introModalText}
         formIntro={formIntro}
         pageNumber={pageNumber}
         numberOfPages={numberOfPages}

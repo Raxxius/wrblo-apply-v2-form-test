@@ -178,11 +178,12 @@ input {
     background-color: #fff;
     border: 1px solid black;
     width: 60vw;
+    max-height: 70vh;
     padding: 40px;
     display: flex;
     flex-direction: column;
+    overflow: scroll;
     align-items: center;
-    justify-content: center;
 }
 
 .modal-close {
