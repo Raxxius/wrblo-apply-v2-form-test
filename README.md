@@ -15,3 +15,9 @@ design new form setups, when posted creates a JSON ready file.
 ### FormBulder.jsx
 
 taking a JSON fetch file displays the form, using react Usestate to update the data file to be ready for reposting. 
+
+
+
+## Dependencies
+
+html-react-parser

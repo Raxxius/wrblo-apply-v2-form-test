@@ -36,6 +36,8 @@ export default function Form() {
         handlePageChange={handlePageChange}
         setPageNumber={setPageNumber}
         pages={pages}
+        setModalActive={setModalActive}
+        setModalText={setModalText}
       />
       <FormBuilder
         pageNumber={pageNumber}

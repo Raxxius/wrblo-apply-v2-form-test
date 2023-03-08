@@ -1,4 +1,5 @@
 import { handleSubmit } from "../../Functions/formFunctions";
+import parse from 'html-react-parser';
 
 export default function FormHeader(props) {
   /** props deconstruction */
@@ -10,11 +11,14 @@ export default function FormHeader(props) {
     handlePageChange,
     setPageNumber,
     pages,
+    setModalActive,
+    setModalText
   } = props;
+
 
   return (
     <div className="form-header">
-      <div className="form-intro">{formIntro}</div>
+      <div className="form-intro">{parse(formIntro)}</div>
       <div className="form-navigation">
         <button className="submit-button" onClick={() => handleSubmit(pages)}>
           Submit the WRBLO Preliminary Application
