@@ -45,6 +45,17 @@ body {
     margin-bottom: 30px;
 }
 
+.form-intro-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.set-modal {
+    margin-left: 5vw;
+    margin-bottom: 2em;
+    width: fit-content;
+}
+
 .submit-button {
   border: none;
   cursor: pointer;
