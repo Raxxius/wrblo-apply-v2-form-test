@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/wrblo-apply-v2-form-test/static/css/main.79520467.css",
-    "main.js": "/wrblo-apply-v2-form-test/static/js/main.1b93d17f.js",
+    "main.css": "/wrblo-apply-v2-form-test/static/css/main.effc37e0.css",
+    "main.js": "/wrblo-apply-v2-form-test/static/js/main.809c7ee4.js",
     "static/js/787.e4f4b499.chunk.js": "/wrblo-apply-v2-form-test/static/js/787.e4f4b499.chunk.js",
     "index.html": "/wrblo-apply-v2-form-test/index.html",
-    "main.79520467.css.map": "/wrblo-apply-v2-form-test/static/css/main.79520467.css.map",
-    "main.1b93d17f.js.map": "/wrblo-apply-v2-form-test/static/js/main.1b93d17f.js.map",
+    "main.effc37e0.css.map": "/wrblo-apply-v2-form-test/static/css/main.effc37e0.css.map",
+    "main.809c7ee4.js.map": "/wrblo-apply-v2-form-test/static/js/main.809c7ee4.js.map",
     "787.e4f4b499.chunk.js.map": "/wrblo-apply-v2-form-test/static/js/787.e4f4b499.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.79520467.css",
-    "static/js/main.1b93d17f.js"
+    "static/css/main.effc37e0.css",
+    "static/js/main.809c7ee4.js"
   ]
 }
