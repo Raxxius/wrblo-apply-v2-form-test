@@ -1,6 +1,13 @@
 const Modal = (props) => {
   return props.modalActive ? (
-    <div className="modal-wrap">
+    <>
+      <div
+        className="modal-wrap"
+        onClick={() => {
+          props.setModalActive(false);
+          props.setModalText("");
+        }}
+      ></div>
       <div className="modal-text">
         <p>{props.modalText}</p>
         <button
@@ -13,7 +20,7 @@ const Modal = (props) => {
           Click to close
         </button>
       </div>
-    </div>
+    </>
   ) : (
     ""
   );
