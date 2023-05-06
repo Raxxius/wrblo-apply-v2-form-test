@@ -5,7 +5,6 @@ import Example from './Tests/Example2';
 import '../src/App.css'
 
 function App() {
-  const data = (Example['formList'])
   return (
     <div className='App'>
       <Header />
