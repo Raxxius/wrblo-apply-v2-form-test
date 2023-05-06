@@ -29,7 +29,7 @@ import FormItem from "./FormItem";
 const FormBuilder = (props) => {
   /** props deconstruction */
 
-  const { pageNumber, formData, setFormData, handleFormChange } = props;
+  const { pageNumber, formData, setFormData, handleFormChange, setModalActive, setModalText } = props;
 
   /* creates an array 'formItems' that Maps data from the formData*/
   const formItems = formData.formList[pageNumber - 1].map((form) => {
@@ -42,6 +42,8 @@ const FormBuilder = (props) => {
             setFormData={setFormData}
             handleFormChange={handleFormChange}
             pageNumber={pageNumber}
+            setModalActive={setModalActive}
+            setModalText={setModalText}
           />
         );
       });
@@ -64,6 +66,8 @@ const FormBuilder = (props) => {
           setFormData={setFormData}
           handleFormChange={handleFormChange}
           pageNumber={pageNumber}
+          setModalActive={setModalActive}
+          setModalText={setModalText}
         />
       );
     }

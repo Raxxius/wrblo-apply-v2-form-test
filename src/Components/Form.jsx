@@ -1,7 +1,8 @@
-import Example2 from "../Tests/Example2";
+import Example from "../Tests/Example";
 import FormBuilder from "./FormComponents/FormBuilder";
 import FormHeader from "./FormComponents/FormHeader";
 import FormFooter from "./FormComponents/FormFooter";
+import Modal from "./Modal";
 import { useState } from "react";
 import {
   parseData,
@@ -11,28 +12,47 @@ import {
 
 export default function Form() {
   /* datafetch */
-  const DATA = Example2;
-  const [formIntro, numberOfPages, pages] = parseData(DATA);
+  const DATA = Example;
+  console.log(parseData(Example))
+  const [formIntro, introModalText, numberOfPages, pages] = parseData(DATA);
+
+  console.log(formIntro)
+  console.log(introModalText)
+  console.log(numberOfPages)
+  console.log(pages)
 
   /* state management */
   const [formData, setFormData] = useState(DATA);
   const [pageNumber, setPageNumber] = useState(1);
+  const [modalActive, setModalActive] = useState(false);
+  const [modalText, setModalText] = useState("");
 
   return (
     <>
+      <Modal
+        modalActive={modalActive}
+        setModalActive={setModalActive}
+        modalText={modalText}
+        setModalText={setModalText}
+      />
       <FormHeader
+        introModalText={introModalText}
         formIntro={formIntro}
         pageNumber={pageNumber}
         numberOfPages={numberOfPages}
         handlePageChange={handlePageChange}
         setPageNumber={setPageNumber}
         pages={pages}
+        setModalActive={setModalActive}
+        setModalText={setModalText}
       />
       <FormBuilder
         pageNumber={pageNumber}
         formData={formData}
         setFormData={setFormData}
         handleFormChange={handleFormChange}
+        setModalActive={setModalActive}
+        setModalText={setModalText}
       />
       <FormFooter formData={formData} setFormData={setFormData} />
     </>

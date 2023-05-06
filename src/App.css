@@ -10,6 +10,7 @@ body {
 }
 
 .main-header {
+    position: relative;
   justify-content: center;
   align-items: center;
   height: 90px;
@@ -20,6 +21,7 @@ body {
   line-height: 24px;
   color: #262353;
   display: flex;
+  z-index: 999;
 }
 
 /** form basic CSS */
@@ -41,6 +43,17 @@ body {
     margin-right: 10vw;
     margin-left: 5vw;
     margin-bottom: 30px;
+}
+
+.form-intro-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.set-modal {
+    margin-left: 5vw;
+    margin-bottom: 2em;
+    width: fit-content;
 }
 
 .submit-button {
@@ -154,6 +167,38 @@ input {
     width: 25px;
     margin-top: 3px;
     margin-left: 15px;
+}
+
+/** Form modal styling */
+
+.modal-wrap {
+    position: fixed;
+    top: 0px;
+    height: 100vh;
+    width: 100vw;
+    backdrop-filter: blur(5px);
+    color: black;    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+
+.modal-text {
+    background-color: #fff;
+    border: 1px solid black;
+    width: 60vw;
+    max-height: 70vh;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    overflow: scroll;
+    align-items: center;
+}
+
+.modal-close {
+   text-align: center;
 }
 
 /** Form footer styling */

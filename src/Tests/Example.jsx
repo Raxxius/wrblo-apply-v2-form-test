@@ -1,186 +1,247 @@
 const WRBLO_PRELIMINARY = {
-    formList: [
-        {
-            id: '0',
-            listType: 'fieldset',
-            legend: 'Your Organisation',
-            list: [{
-                id: '1',
-                listType: 'text',
-                formlegend: 'Organisation Legal status and registration details',
-                formText: '',
-                maxCharacter: 150,
-            },
-            {
-                id: '2',
-                listType: 'text',
-                formlegend: 'Contact details',
-                formText: '',
-                maxCharacter: 150,
-                helpButton: `The first and usually the easiest part of the application asks for the applicant group's name, address, and telephone/fax numbers. However, WRBLO will expect the most senior person or chairperson to be the designated contact for signing contracts etc if you are successful be sure to have someone who can sign the application on the organisation’s behalf listed as the key contact.`
-            },
-            {
-                id: '3',
-                listType: 'text',
-                formlegend: 'How did you hear about WRBLO?',
-                formText: '',
-                maxCharacter: 150,
-            }]
-        },
-        {
-            id: '4',
-            listType: 'fieldset',
-            legend: '',
-            list: [{
-                id: '5',
-                listType: 'text',
-                formlegend: 'Amount of funding requested, including currency',
-                formText: '',
-                maxCharacter: 150,
-            },
-            {
-                id: '6',
-                listType: 'text',
-                formlegend: 'Duration',
-                formText: '',
-                maxCharacter: 150,
-            },
-            {
-                id: '7',
-                listType: 'text',
-                formlegend: 'Project location',
-                formText: '',
-                maxCharacter: 150,
-            },
-            {
-                id: '8',
-                listType: 'text',
-                formlegend: 'Livelihood opportunity',
-                formText: '',
-                maxCharacter: 150,
-            },
-            {
-                id: '9',
-                listType: 'text',
-                formlegend: 'Funding Status',
-                formText: '',
-                maxCharacter: 150,
-            }]
-        },
-        {
-            id: '10',
-            listType: 'fieldset',
-            legend: 'Purpose and aims',
-            list: [{
-                id: '11',
-                listType: 'text',
-                formlegend: 'Who are the Beneficiaries?',
-                formText: '',
-                maxCharacter: 150,
-            },
-            {
-                id: '12',
-                listType: 'text',
-                formlegend: 'Measureable impact',
-                formText: '',
-                maxCharacter: 150,
-            }]
-        },
-        {
-            id: '13',
-            listType: 'text',
-            formlegend: 'What is driving your Philanthropic call?',
-            formText: '',
+  intro:
+    "<p>Welcome to the WRBLO preliminary Apply system.</p> <p>Please fill out the form and click apply to open an email (seperate email) to send the application to WRBLO.</p><p>If you need to save the application in progress, a text file will be downloaded, you can load that textfile from the 'choose file' button",
+  introModalText:
+    "<h3>Advanced Considerations for your application to WRBLO</h3><p>1. Good Governance</p><p>Applications to WRBLO must demonstrate good governance such as leadership, appropriate controls, and the ability to operate effectively, and with integrity.</p><p>2. Focus on strengths</p><p>Whilst WRBLO is inviting you to apply to have your organisation's needs met, we also want your application to identify your strengths and your past and current activities in your processes of improving your communities.</p><p>3. Collaboration</p><p>Just as collections of people can usually achieve more than individuals, whilst groups of organisations can often create bigger and better results than those working alone. You do not necessarily need to ‘own’ every initiative yourself. Pooling resources can deliver efficiencies, achieve economies of scale and bring about greater impact. Please remember that resources do not just come in the shape of money, but also land, equipment, knowledge, contacts, time, energy, and so on. Working in partnership with other organisations can take many forms, from informal information-sharing to formal mergers. Partners can be other community groups, but can also be local businesses, statutory bodies, educational establishments, the press, and so on.</p><p>4. Innovation</p><p>There are many tried and tested ways of doing things. Those that work well should, of course, be continued. However, there is almost always room for improvement. WRBLO are eager to support organisations that are open to change, that will demonstrate creativity and that are prepared to find innovative solutions to problems in their community. This does not always mean having to come up with brand-new ideas; it may simply mean being prepared to research and adopt initiatives that have been shown to work elsewhere (testing and adapting them as necessary).</p><p>5. Shows visible results</p><p>As a community group, you need to be clear about what your purpose is and what it is that you intend to achieve. Socioeconomic and environmental progress can often take a very long time to bring about. However, you should nonetheless strive for early visible results, however small. This will help to convince us of your project's sustainability and make it easier to garner further support on your behalf.</p><p>6. Everything we do helps or harms The Environment</p><p>The environment, the economy and society ought not to be thought of in terms of being three entirely separate things, because social, economic and environmental factors are completely interdependent. For example, we cannot claim to have a successful economy if, in the process of creating financial profit, we damage the natural environment or do not uphold basic human rights.</p><p>7. Demonstrates Resilience</p><p>Your group needs to demonstrate that you have and can cope with these hard times. Being resilient is about practical preparedness (for example, holding some financial reserves and having appropriate insurance coverage, but resilience is also about not being overly dependent on others, about being self-reliant and about being adaptable in a context of uncertainty.</p>",
+  numberOfPages: 3,
+  formList: [
+    [
+      {
+        id: "0",
+        listType: "fieldset",
+        legend: "Your Organisation",
+        list: [
+          {
+            id: "1A",
+            listType: "text",
+            formlegend: "Organisation Name",
+            formText: "",
             maxCharacter: 150,
-        },
-        {
-            id: '14',
-            listType: 'text',
-            formlegend: 'Track record',
-            formText: '',
+            helpButton: `The first and usually the easiest part of the application asks for the applicant group's name, address, and telephone/fax numbers. However, WRBLO will expect the most senior person or chairperson to be the designated contact for signing contracts etc if you are successful be sure to have someone who can sign the application on the organisation’s behalf listed as the key contact.`,
+          },
+          {
+            id: "1B",
+            listType: "text",
+            formlegend: "Organisation Legal status",
+            formText: "",
             maxCharacter: 150,
-        },
-        {
-            id: '15',
-            listType: 'text',
-            formlegend: 'Best evidence',
-            formText: '',
+          },
+          {
+            id: "1C",
+            listType: "text",
+            formlegend: "Organisation Registration details",
+            formText: "",
             maxCharacter: 150,
-        },
-        {
-            id: '16',
-            listType: 'text',
-            formlegend: 'M&E',
-            formText: '',
+          },
+          {
+            id: "1D",
+            listType: "text",
+            formlegend: "Lead Contact",
+            formText: "",
             maxCharacter: 150,
-        },
-        {
-            id: '17',
-            listType: 'text',
-            formlegend: 'Exit',
-            formText: '',
+          },
+          {
+            id: "1E",
+            listType: "email",
+            formlegend: "Email Address",
+            formText: "",
             maxCharacter: 150,
-        },
-        {
-            id: '18',
-            listType: 'text',
-            formlegend: 'Collaboration',
-            formText: '',
+          },
+          {
+            id: "1F",
+            listType: "text",
+            formlegend: "How did you hear about WRBLO?",
+            formText: "",
             maxCharacter: 150,
-        },
-        {
-            id: '19',
-            listType: 'text',
-            formlegend: 'Organisation development and ambation',
-            formText: '',
+          },
+          {
+            id: "1G",
+            listType: "textarea",
+            formlegend: "Address",
+            formText: "",
+            maxCharacter: 250,
+          },
+        ],
+      },
+      {
+        id: "4",
+        listType: "fieldset",
+        legend: "",
+        list: [
+          {
+            id: "5",
+            listType: "text",
+            formlegend: "Amount of funding requested, including currency",
+            formText: "",
             maxCharacter: 150,
-        },
-        {
-            id: '20',
-            listType: 'fieldset',
-            legend: 'Financials',
-            list: [{
-                id: '21',
-                listType: 'text',
-                formlegend: 'Income',
-                formText: '',
-                maxCharacter: 150,
-            },
-            {
-                id: '22',
-                listType: 'text',
-                formlegend: 'Funds/reserves/savings',
-                formText: '',
-                maxCharacter: 150,
-            },
-            {
-                id: '23',                
-                listType: 'text',
-                formlegend: 'Expenditure',
-                formText: '',
-                maxCharacter: 150,
-            },
-            {
-                id: '24',                
-                listType: 'text',
-                formlegend: 'Reserves policy',
-                formText: '',
-                maxCharacter: 150,
-            },
-            {
-                id: '25',                
-                listType: 'text',
-                formlegend: 'Currency',
-                formText: '',
-                maxCharacter: 150,
-            }]
-        },
-        {
-            id: '26',
-            listType: 'file',
-            formlegend: 'Additional data'
-        }
-    ]
-}
+            helpButton:
+              "WRBLO will require a realistic and well-costed budget to be submitted with the application. Regardless of what you ask us for - you will need to fully cost the project and include every possible expense. WRBLO will not generally pay for items retrospectively, i.e. they will not backdate a grant for items purchased or salaries already paid. You need to wait to hear if you have been successful before any expenditure for the items requested can be made. When applying for funding to cover capital build and equipment, you will need realistic estimates and quotes. For salaries, you are recommended to choose a salary level from a recognized scale. For overheads, it is necessary to detail how you have calculated the costs, for example from previous bills or costs in similar projects. If you are budgeting for a project, which lasts for more than a year, you will have to take inflation and general cost of living increases into account. Staff salary increases, potential increases in electricity, telephone charges and even stationery all have to be budgeted for. Also, if you are applying for a project that is due to start several months away, will the price have increased during those ten months? Consider that WRBLO may accept volunteer hours as a community contribution known as a contribution in-kind as match funding. Match funding is where WRBLO agrees to fund only a percentage of costs and expects funding to be ‘matched' from other sources.",
+          },
+          {
+            id: "6",
+            listType: "text",
+            formlegend: "Duration",
+            formText: "",
+            maxCharacter: 150,
+          },
+          {
+            id: "7",
+            listType: "text",
+            formlegend: "Project location",
+            formText: "",
+            maxCharacter: 150,
+          },
+          {
+            id: "8",
+            listType: "text",
+            formlegend: "Livelihood opportunity",
+            formText: "",
+            maxCharacter: 150,
+          },
+          {
+            id: "9",
+            listType: "text",
+            formlegend: "Funding Status",
+            formText: "",
+            maxCharacter: 150,
+          },
+        ],
+      },
+    ],
+    [
+      {
+        id: "10",
+        listType: "fieldset",
+        legend: "Purpose and aims",
+        list: [
+          {
+            id: "11",
+            listType: "textarea",
+            formlegend: "Who are the Beneficiaries?",
+            formText: "",
+            maxCharacter: 1000,
+            helpButton:
+              "Also referred to as your vision and mission, it is useful to have a standard set of aims and objectives that your organisation has agreed to that you can copy and paste into every grant application. Top Tip: Start a document full of the things that you add to grant applications regularly. This will save you time in the future by having a single document will all these pieces of the application to hand.",
+          },
+          {
+            id: "12",
+            listType: "textarea",
+            formlegend: "Measureable impact",
+            formText: "",
+            maxCharacter: 1000,
+          },
+        ],
+      },
+      {
+        id: "13a",
+        listType: "fieldset",
+        legend: "",
+        list: [
+          {
+            id: "13",
+            listType: "textarea",
+            formlegend: "What is driving your Philanthropic call?",
+            formText: "",
+            maxCharacter: 1000,
+            helpButton:
+              "Increasingly WRBLO will want to see that there is evidence to prove that what you are applying for is needed in the community or location where you are applying. How can you prove it? Have you looked at national statistics and seen if your area performs above or below the national average? Have you conducted quantitative or qualitative surveys or other forms of feedback in your community to see what the residents say? To demonstrate the extent of the ‘need', it is often useful to cite statistics from a recognised source. So do some homework. Ask around. Find out what are the needs in your community and what is the evidence for it.",
+          },
+          {
+            id: "14",
+            listType: "textarea",
+            formlegend: "Track record",
+            formText: "",
+            maxCharacter: 1000,
+            helpButton:
+              "WRBLO will want to know a little bit about your history. We will want to determine if you have done similar work to that for which you are applying. What size/scale has your organisation been working to in the past? If WRBLO gave you this money, would you have the capacity and previous experience to implement the project as you propose? Giving a good background of your organisation relevant to the grant that you are applying for is what is required here.",
+          },
+          {
+            id: "15",
+            listType: "textarea",
+            formlegend: "Best evidence",
+            formText: "",
+            maxCharacter: 1000,
+          },
+          {
+            id: "16",
+            listType: "textarea",
+            formlegend: "M&E",
+            formText: "",
+            maxCharacter: 1000,
+            helpButton:
+              "WRBLO will want to know how successful (or not) investment in your project has been. At a minimum, we will ask for projects to be self-assessed. That is, we ask the applicant to state upfront how it plans to assess the project, collect the monitoring information and conduct the evaluation of the project. If the monitoring and evaluation processes are included at the project planning stage, this becomes much easier to answer. In addition to your internal monitoring and evaluation processes, WRBLO will act as an external evaluator to provide an independent eye.",
+          },
+          {
+            id: "17",
+            listType: "textarea",
+            formlegend: "Exit",
+            formText: "",
+            maxCharacter: 1000,
+          },
+          {
+            id: "18",
+            listType: "textarea",
+            formlegend: "Collaboration",
+            formText: "",
+            maxCharacter: 1000,
+          },
+          {
+            id: "19",
+            listType: "textarea",
+            formlegend: "Organisation development and ambation",
+            formText: "",
+            maxCharacter: 1000,
+            helpButton:
+              "When WRBLO asks if the project is sustainable we want to know how you will fund the project beyond the amount of money we agree to provide. You have 3 options: 1. that the project will finish at the end of the grant period 2. that the project will secure funding from other sources 3. that the project will generate its revenue through services/contract delivery etc.Don’t rely on other organisations to sustain your project for you. It would be unrealistic to state that you expect a statutory body to take on the funding of your project unless you have very strong evidence and commitments to that effect. You are best advised to demonstrate what you can realistically do within your resources to secure ongoing funding for the project and/or show how you can wind down the project in an orderly manner.",
+          },
+        ],
+      },
+    ],
+    [
+      {
+        id: "20",
+        listType: "fieldset",
+        legend: "Financials",
+        list: [
+          {
+            id: "21",
+            listType: "text",
+            formlegend: "Income",
+            formText: "",
+            maxCharacter: 150,
+          },
+          {
+            id: "22",
+            listType: "text",
+            formlegend: "Funds/reserves/savings",
+            formText: "",
+            maxCharacter: 150,
+          },
+          {
+            id: "23",
+            listType: "text",
+            formlegend: "Expenditure",
+            formText: "",
+            maxCharacter: 150,
+          },
+          {
+            id: "24",
+            listType: "text",
+            formlegend: "Reserves policy",
+            formText: "",
+            maxCharacter: 150,
+          },
+          {
+            id: "25",
+            listType: "text",
+            formlegend: "Currency",
+            formText: "",
+            maxCharacter: 150,
+          },
+        ],
+      },
+    ],
+  ],
+};
 
-export default WRBLO_PRELIMINARY
+export default WRBLO_PRELIMINARY;

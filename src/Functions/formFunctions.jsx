@@ -10,11 +10,12 @@ export function parseData(props) {
   const numberOfPages = props.numberOfPages;
   const pages = [];
   const formIntro = props.intro;
+  const introModalText = props.introModalText
   for (let i = 0; i < numberOfPages; i++) {
     pages.push(props.formList[i]);
   }
 
-  return [formIntro, numberOfPages, pages];
+  return [formIntro, introModalText, numberOfPages, pages];
 }
 
 /** Page slider function
@@ -28,12 +29,12 @@ export function handlePageChange(e, setPageNumber, numberOfPages) {
   setPageNumber((prevPageNumber) => {
     let newPageNumber = prevPageNumber;
     if (e === "prev") {
-      if (prevPageNumber != 1) {
+      if (prevPageNumber !== 1) {
         newPageNumber--;
       }
     }
     if (e === "next") {
-      if (prevPageNumber != numberOfPages) {
+      if (prevPageNumber !== numberOfPages) {
         newPageNumber++;
       }
     }
@@ -112,8 +113,10 @@ export function handleFormChange(event, setFormData, pageNumber) {
 
 /** Current alert, to be fleshed out to a modal */
 
-export function handleHelpButton(helpButton) {
-  alert(helpButton);
+export function handleHelpButton(helpButton, setModalActive, setModalText) {
+  console.log("modal activated")
+  setModalActive(true)
+  setModalText(helpButton)
 }
 
 /* Handle Save
