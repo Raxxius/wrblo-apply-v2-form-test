@@ -3,29 +3,24 @@ import FormBuilder from "./FormComponents/FormBuilder";
 import FormHeader from "./FormComponents/FormHeader";
 import FormFooter from "./FormComponents/FormFooter";
 import Modal from "./Modal";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import {
   parseData,
   handlePageChange,
   handleFormChange,
 } from "../Functions/formFunctions";
 
-export default function Form() {
-  /* datafetch */
-  const DATA = Example;
-  console.log(parseData(Example))
-  const [formIntro, introModalText, numberOfPages, pages] = parseData(DATA);
 
-  console.log(formIntro)
-  console.log(introModalText)
-  console.log(numberOfPages)
-  console.log(pages)
+export default function Form() {
+
+  const [formIntro, introModalText, numberOfPages, pages] = parseData(Example);
 
   /* state management */
-  const [formData, setFormData] = useState(DATA);
+  const [formData, setFormData] = useState(Example);
   const [pageNumber, setPageNumber] = useState(1);
   const [modalActive, setModalActive] = useState(false);
   const [modalText, setModalText] = useState("");
+
 
   return (
     <>
