@@ -200,6 +200,7 @@ input {
 
 .modal-close {
   text-align: center;
+  padding: 2px;
 }
 
 /** Form footer styling */
