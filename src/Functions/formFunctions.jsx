@@ -10,7 +10,7 @@ export function parseData(props) {
   const numberOfPages = props.numberOfPages;
   const pages = [];
   const formIntro = props.intro;
-  const introModalText = props.introModalText
+  const introModalText = props.introModalText;
   for (let i = 0; i < numberOfPages; i++) {
     pages.push(props.formList[i]);
   }
@@ -50,11 +50,18 @@ export function handlePageChange(e, setPageNumber, numberOfPages) {
  */
 
 export function handleSubmit(pages) {
-  /* need to generate function that automates taking the page out */
-  const page1 = pages[0];
-  const page2 = pages[1];
-  const page3 = pages[2];
-  const formData = [...page1, ...page2, ...page3];
+  /*
+   * sub function that parses the pages into an array
+   */
+  const parseFormData = (pages) => {
+    let returnValue = [];
+    pages.map((page) => {
+      returnValue.push(...page);
+    });
+    return returnValue;
+  };
+
+  const formData = parseFormData(pages);
 
   alert(
     "Please remember to attach any additional documents to the email before sending"
@@ -79,9 +86,9 @@ export function handleSubmit(pages) {
  * Reponse to keystroke 'event' when user is inputing data to form
  *
  * input = keystroke event, setFormData state function and pageNumber
- * 
- * output = statechange(formData) event 
- * 
+ *
+ * output = statechange(formData) event
+ *
  **/
 
 export function handleFormChange(event, setFormData, pageNumber) {
@@ -105,8 +112,8 @@ export function handleFormChange(event, setFormData, pageNumber) {
       }
       return form;
     });
-    let returnValue = {...prevFormData};
-    returnValue.formList[pageNumber - 1] = newFormData
+    let returnValue = { ...prevFormData };
+    returnValue.formList[pageNumber - 1] = newFormData;
     return returnValue;
   });
 }
@@ -114,9 +121,9 @@ export function handleFormChange(event, setFormData, pageNumber) {
 /** Current alert, to be fleshed out to a modal */
 
 export function handleHelpButton(helpButton, setModalActive, setModalText) {
-  console.log("modal activated")
-  setModalActive(true)
-  setModalText(helpButton)
+  console.log("modal activated");
+  setModalActive(true);
+  setModalText(helpButton);
 }
 
 /* Handle Save
