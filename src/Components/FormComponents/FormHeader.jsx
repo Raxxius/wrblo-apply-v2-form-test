@@ -40,7 +40,7 @@ export default function FormHeader(props) {
           </div>
           <div className="button-box">
             <button
-              className="prev-page, page-button"
+              className="prev-page page-button"
               onClick={() =>
                 handlePageChange("prev", setPageNumber, numberOfPages)
               }
@@ -48,7 +48,7 @@ export default function FormHeader(props) {
               Prev Page
             </button>
             <button
-              className="next-page, page-button"
+              className="next-page page-button"
               onClick={() =>
                 handlePageChange("next", setPageNumber, numberOfPages)
               }
