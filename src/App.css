@@ -86,15 +86,23 @@ body {
   font-weight: 800;
 }
 
+.button-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
 .page-button {
   cursor: pointer;
   border: none;
-  background-color: #fff;
-  color: #888;
+  color: #fff;
+  background-color: #262353;
+  padding: 5px;
+  margin: 5px;
 }
 
 .page-button:hover {
-  font-weight: 600;
+  color: #c29f48;
 }
 
 /** Form styling */
