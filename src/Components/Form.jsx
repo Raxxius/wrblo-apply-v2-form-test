@@ -24,7 +24,7 @@ export default function Form() {
 
   return (
     <>
-      {/* <Modal
+      <Modal
         modalActive={modalActive}
         setModalActive={setModalActive}
         modalText={modalText}
@@ -40,7 +40,7 @@ export default function Form() {
         pages={pages}
         setModalActive={setModalActive}
         setModalText={setModalText}
-      /> */}
+      />
       <FormBuilder
         pageNumber={pageNumber}
         formData={formData}
