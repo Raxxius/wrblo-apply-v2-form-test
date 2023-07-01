@@ -55,9 +55,9 @@ export function handleSubmit(pages) {
    */
   const parseFormData = (pages) => {
     let returnValue = [];
-    pages.map((page) => {
-      returnValue.push(...page);
-    });
+    pages.map((page) => (
+      returnValue.push(...page)
+    ));
     return returnValue;
   };
 
