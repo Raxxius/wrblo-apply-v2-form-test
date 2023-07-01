@@ -3,7 +3,7 @@ import FormBuilder from "./FormComponents/FormBuilder";
 import FormHeader from "./FormComponents/FormHeader";
 import FormFooter from "./FormComponents/FormFooter";
 import Modal from "./Modal";
-import useState from "react";
+import { useState } from "react";
 import {
   parseData,
   handlePageChange,
