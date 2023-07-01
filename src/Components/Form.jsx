@@ -49,7 +49,7 @@ export default function Form() {
         setModalActive={setModalActive}
         setModalText={setModalText}
       />
-      {/* <FormFooter formData={formData} setFormData={setFormData} /> */}
+      <FormFooter formData={formData} setFormData={setFormData} />
     </>
   );
 }
