@@ -15,7 +15,7 @@ const FormItem = (props) => {
     handleFormChange,
     pageNumber,
     setModalActive,
-    setModalText
+    setModalText,
   } = props;
 
   const value = formText;
@@ -25,7 +25,12 @@ const FormItem = (props) => {
 
   if (helpButton !== undefined) {
     helpButtonDiv = (
-      <button className="form-help-button" onClick={() => handleHelpButton(helpButton, setModalActive, setModalText)}>
+      <button
+        className="form-help-button"
+        onClick={() =>
+          handleHelpButton(helpButton, setModalActive, setModalText)
+        }
+      >
         ?
       </button>
     );
@@ -61,8 +66,10 @@ const FormItem = (props) => {
       <label className="form" htmlFor={id}>
         {formlegend}
       </label>
-      {input}
-      {helpButtonDiv}
+      <div className="form-input-help">
+        {input}
+        {helpButtonDiv}
+      </div>
     </div>
   );
 };
