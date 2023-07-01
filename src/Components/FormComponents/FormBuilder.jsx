@@ -76,9 +76,6 @@ const FormBuilder = (props) => {
   /* Core return render **/
   return (
     <div className="form-box">
-      <div className="header-box">
-        <div className="description"></div>
-      </div>
       <div className="form-content">{formItems}</div>
     </div>
   );

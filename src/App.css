@@ -102,7 +102,8 @@ body {
 }
 
 .page-button:hover {
-  color: #c29f48;
+  color: black;
+  background-color: #fff;
 }
 
 /** Form styling */
@@ -129,11 +130,10 @@ body {
 
 .form-item {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
 }
 
 .form {
-  width: 450px;
   text-align: left;
   margin-left: 50px;
   padding-top: 2px;
@@ -141,10 +141,15 @@ body {
   color: black;
 }
 
+.form-input-help {
+  display: flex;
+  justify-content: flex-start;
+}
+
 fieldset {
   background-color: #fff;
   border: 1px solid #262353;
-  width: 1200px;
+  width: 95vw;
   display: flex;
   flex-direction: column;
   padding-top: 40px;
@@ -156,14 +161,14 @@ fieldset {
 textarea {
   margin-top: 2px;
   margin-bottom: 2px;
-  width: 670px;
+  width: 95%;
   height: 100px;
 }
 
 input {
   margin-top: 2px;
   margin-bottom: 2px;
-  width: 670px;
+  width: 95%;
 }
 
 .form-help-button {
@@ -238,4 +243,29 @@ input {
   width: 170px;
   background-color: #262353;
   color: #fff;
+}
+
+@media (min-width: 1200px) {
+
+    .form-item {
+      flex-direction: row;
+    }
+  
+    textarea {
+      width: 670px;
+    }
+
+    input {
+      width: 670px;
+    }
+
+    fieldset {
+      width: 95vw;
+      max-width: 1200px;
+}
+
+  label {
+    width: 450px;
+  }
+
 }
