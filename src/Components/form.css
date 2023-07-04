@@ -1,0 +1,91 @@
+body {
+  background: #ECF9FF;
+  background: linear-gradient(0deg, hsla(199, 100%, 96%, 1) 0%, hsla(48, 100%, 96%, 1) 98%);
+  min-height: 100vh;
+}
+
+.form-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-align: center;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  background-color: black;
+  color: aliceblue;
+}
+
+.form-header {
+  display: flex;
+  padding: 1rem;
+  justify-content: space-evenly;
+}
+
+.form-box {
+  background-color: #FFFF;
+  border-color: grey;
+  border-style: solid;
+  border-width: 1px;
+  padding: 1.5rem;
+}
+
+.form-item {
+    padding: 0.5rem;
+}
+
+.form-input-help {
+    padding-top: 0.2rem;
+}
+
+input {
+    width: 90%;
+    height: 1.5rem;
+}
+
+.radio-box {
+    padding-top: 0.5rem;
+}
+
+.radio {
+    width: auto;
+    margin-right: 1rem;
+    height: auto;
+}
+
+.checkbox-box {
+    padding-top: 0.5rem;
+}
+
+.checkbox {
+    width: auto;
+    height: auto;
+}
+
+textarea {
+    width: 90%;
+    height: 4rem;
+}
+
+.save-load-button {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 1rem;
+}
+
+@media only screen and (min-width: 760px) {
+    .form-header {
+        max-width: 760px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .form-box {
+        max-width: 760px;
+        border-radius: 1rem;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .form-footer {
+        max-width: 760px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}

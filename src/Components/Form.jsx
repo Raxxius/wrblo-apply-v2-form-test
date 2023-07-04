@@ -3,24 +3,30 @@ import FormBuilder from "./FormComponents/FormBuilder";
 import FormHeader from "./FormComponents/FormHeader";
 import FormFooter from "./FormComponents/FormFooter";
 import Modal from "./Modal";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import {
-  parseData,
   handlePageChange,
   handleFormChange,
 } from "../Functions/formFunctions";
-
+import "./form.css"
 
 export default function Form() {
-
-  const [formIntro, introModalText, numberOfPages, pages] = parseData(Example);
-
   /* state management */
   const [formData, setFormData] = useState(Example);
   const [pageNumber, setPageNumber] = useState(1);
   const [modalActive, setModalActive] = useState(false);
   const [modalText, setModalText] = useState("");
+  
 
+  useEffect(() => {
+    fetch(
+      "https://script.google.com/macros/s/AKfycbyOmNJ4J0EOouG61xVDeyC74Rr1W8TaT8sCGxcjCWZnpTLNCd0vipzPXT4pqdkCNfhs/exec?id=1"
+    )
+      .then((response) => response.json())
+      .then((data) => {
+          setFormData(data)
+      });
+  }, []);
 
   return (
     <>
@@ -31,13 +37,13 @@ export default function Form() {
         setModalText={setModalText}
       />
       <FormHeader
-        introModalText={introModalText}
-        formIntro={formIntro}
+        introModalText={formData.introModalText}
+        formIntro={formData.formIntro}
         pageNumber={pageNumber}
-        numberOfPages={numberOfPages}
+        numberOfPages={formData.pageCount}
         handlePageChange={handlePageChange}
         setPageNumber={setPageNumber}
-        pages={pages}
+        pages={formData.formList}
         setModalActive={setModalActive}
         setModalText={setModalText}
       />
