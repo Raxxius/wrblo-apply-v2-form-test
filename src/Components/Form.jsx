@@ -17,7 +17,7 @@ export default function Form() {
   const [modalActive, setModalActive] = useState(false);
   const [modalText, setModalText] = useState("");
   
-
+  console.log(formData)
   useEffect(() => {
     fetch(
       "https://script.google.com/macros/s/AKfycbyfm9AZ-Lmdzsek9pPeNCpuJqoVZRVNi7qZtruMWMyjrxeDoFMcnk3XzUf8r_kbN9MK/exec?id=1"
@@ -40,7 +40,7 @@ export default function Form() {
         introModalText={formData.introModalText}
         formIntro={formData.formIntro}
         pageNumber={pageNumber}
-        numberOfPages={formData.pageCount}
+        numberOfPages={formData.numberOfPages}
         handlePageChange={handlePageChange}
         setPageNumber={setPageNumber}
         pages={formData.formList}

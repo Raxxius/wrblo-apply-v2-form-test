@@ -1,10 +1,9 @@
-import { handleSubmit } from "../../Functions/formFunctions";
-import { handleHelpButton } from "../../Functions/formFunctions";
+import { handleSubmit, handleHelpButton } from "../../Functions/formFunctions";
 import parse from "html-react-parser";
 
 export default function FormHeader(props) {
   /** props deconstruction */
-
+  
   const {
     intro,
     introModalText,
@@ -17,6 +16,7 @@ export default function FormHeader(props) {
     setModalText,
   } = props;
 
+    console.log(numberOfPages)
   return (
     <div className="form-header">
       <div className="form-intro-wrapper">
