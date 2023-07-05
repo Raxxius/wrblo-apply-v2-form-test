@@ -8,7 +8,7 @@ const FormItem = (props) => {
     id,
     listType,
     formlegend,
-    formtext,
+    formText,
     maxCharacter,
     helpButton,
     setFormData,
@@ -18,7 +18,9 @@ const FormItem = (props) => {
     setModalText,
   } = props;
 
-  const value = formtext;
+  const value = formText;
+
+  console.log(formText)
 
   /** If a help button is in the form data, adds one, else doesn't render */
   let helpButtonDiv = "";
