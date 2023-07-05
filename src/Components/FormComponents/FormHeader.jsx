@@ -6,7 +6,7 @@ export default function FormHeader(props) {
   /** props deconstruction */
 
   const {
-    formIntro,
+    intro,
     introModalText,
     pageNumber,
     numberOfPages,
@@ -20,7 +20,7 @@ export default function FormHeader(props) {
   return (
     <div className="form-header">
       <div className="form-intro-wrapper">
-        {/* <div className="form-intro">{parse(formIntro)}</div> */}
+        <div className="form-intro">{intro}</div>
         <button
           className="set-modal"
           onClick={() =>
