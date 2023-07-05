@@ -1,4 +1,4 @@
-import stringToArray from "../../hooks/stringToArray";
+import stringToArray from "../../../Functions/stringToArray";
 
 export default function Radio(props) {
   /* Props deconstruction */
