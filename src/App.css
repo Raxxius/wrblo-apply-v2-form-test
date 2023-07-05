@@ -170,38 +170,6 @@ input {
   margin-left: 15px;
 }
 
-/** Form modal styling */
-
-.modal-wrap {
-  position: fixed;
-  top: 0px;
-  height: 100vh;
-  width: 100vw;
-  backdrop-filter: blur(5px);
-  z-index: 9991;
-}
-
-.modal-text {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 9992;
-  background-color: #fff;
-  border: 1px solid black;
-  width: 90vw;
-  max-height: 90vh;
-  padding: 40px;
-  display: flex;
-  flex-direction: column;
-  overflow: auto;
-  align-items: center;
-}
-
-.modal-close {
-  text-align: center;
-  padding: 2px;
-}
 
 /** Form footer styling */
 
