@@ -19,7 +19,7 @@ export default function Form() {
   
   useEffect(() => {
     fetch(
-      "https://script.google.com/macros/s/AKfycbyfm9AZ-Lmdzsek9pPeNCpuJqoVZRVNi7qZtruMWMyjrxeDoFMcnk3XzUf8r_kbN9MK/exec?id=0"
+      "https://script.google.com/macros/s/AKfycbx9c-2XTbioCGYRWcg56I7G2-TZWr0zPsUNd--YRa_NtdEvTK4xXOo16l-KsJ8jUAfg/exec?id=0"
     )
       .then((response) => response.json())
       .then((data) => {
