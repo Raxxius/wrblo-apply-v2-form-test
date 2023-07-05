@@ -20,12 +20,10 @@ const FormItem = (props) => {
 
   const value = formText;
 
-  console.log(formText)
-
   /** If a help button is in the form data, adds one, else doesn't render */
   let helpButtonDiv = "";
 
-  if (helpButton != undefined) {
+  if (helpButton != "") {
     helpButtonDiv = (
       <button
         className="form-help-button"
