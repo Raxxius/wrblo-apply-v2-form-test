@@ -20,7 +20,7 @@ export default function Form() {
 
   useEffect(() => {
     fetch(
-      "https://script.google.com/macros/s/AKfycbyOmNJ4J0EOouG61xVDeyC74Rr1W8TaT8sCGxcjCWZnpTLNCd0vipzPXT4pqdkCNfhs/exec?id=1"
+      "https://script.google.com/macros/s/AKfycbyfm9AZ-Lmdzsek9pPeNCpuJqoVZRVNi7qZtruMWMyjrxeDoFMcnk3XzUf8r_kbN9MK/exec?id=1"
     )
       .then((response) => response.json())
       .then((data) => {

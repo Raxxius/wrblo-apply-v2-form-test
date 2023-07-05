@@ -20,7 +20,7 @@ export default function FormHeader(props) {
   return (
     <div className="form-header">
       <div className="form-intro-wrapper">
-        <div className="form-intro">{parse(formIntro)}</div>
+        {/* <div className="form-intro">{parse(formIntro)}</div> */}
         <button
           className="set-modal"
           onClick={() =>

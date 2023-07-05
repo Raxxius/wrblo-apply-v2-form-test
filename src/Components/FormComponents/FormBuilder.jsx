@@ -9,7 +9,7 @@ import FormItem from "./FormItem";
  * id: 'str'
  * listType: 'str',
  * formlegend: '{title of form}'
- * formText: '{User input text}'
+ * formtext: '{User input text}'
  * maxCharacter: '{max number of characters in the input}
  * }
  *
