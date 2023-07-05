@@ -39,7 +39,7 @@ export default function FormHeader(props) {
       </div>
       <div className="form-navigation">
         <button className="submit-button" onClick={() => handleSubmit(pages)}>
-          Submit the WRBLO Preliminary Application
+          Submit the form
         </button>
         {numberOfPages > 1 ? (
           <div className="page-selector">
