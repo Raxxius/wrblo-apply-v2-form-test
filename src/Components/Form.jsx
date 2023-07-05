@@ -17,7 +17,6 @@ export default function Form() {
   const [modalActive, setModalActive] = useState(false);
   const [modalText, setModalText] = useState("");
   
-  console.log(formData)
   useEffect(() => {
     fetch(
       "https://script.google.com/macros/s/AKfycbyfm9AZ-Lmdzsek9pPeNCpuJqoVZRVNi7qZtruMWMyjrxeDoFMcnk3XzUf8r_kbN9MK/exec?id=1"

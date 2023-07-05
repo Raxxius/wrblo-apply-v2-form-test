@@ -16,7 +16,6 @@ export default function FormHeader(props) {
     setModalText,
   } = props;
 
-  console.log(numberOfPages);
   return (
     <div className="form-header">
       <div className="form-intro-wrapper">
