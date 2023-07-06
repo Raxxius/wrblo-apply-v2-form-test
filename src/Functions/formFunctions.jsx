@@ -68,10 +68,10 @@ export function handleSubmit(pages) {
   );
   const emailBody = formData.map((form) => {
     if (form.listType !== "fieldset") {
-      return `%0A%0A ${form.formlegend}: %0A%0A ${form.formText}`;
+      return `%0A%0A ${form.formlegend}: %0A%0A ${form.formtext}`;
     } else {
       const subForm = form["list"].map((subform) => {
-        return `%0A%0A ${subform.formlegend}: %0A%0A ${subform.formText}`;
+        return `%0A%0A ${subform.formlegend}: %0A%0A ${subform.formtext}`;
       });
       return `%0A%0A ${form.legend} ${subForm}`;
     }
@@ -99,12 +99,12 @@ export function handleFormChange(event, setFormData, pageNumber) {
     /** maps through the form for the event id and changes the value if it's changed */
     newFormData = newFormDataValue.map((form) => {
       if (form.id === event.target.id) {
-        return { ...form, formText: event.target.value };
+        return { ...form, formtext: event.target.value };
       } else if (form.listType === "fieldset") {
         /** if fieldset is used, then sublists the fieldset form */
         const subFormData = form["list"].map((subform) => {
           if (subform.id === event.target.id) {
-            return { ...subform, formText: event.target.value };
+            return { ...subform, formtext: event.target.value };
           }
           return subform;
         });
@@ -114,6 +114,7 @@ export function handleFormChange(event, setFormData, pageNumber) {
     });
     let returnValue = { ...prevFormData };
     returnValue.formList[pageNumber - 1] = newFormData;
+    console.log(returnValue)
     return returnValue;
   });
 }
