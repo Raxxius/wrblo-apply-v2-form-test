@@ -18,7 +18,6 @@ export default function Form() {
   const [modalText, setModalText] = useState("");
   
   useEffect(() => {
-    console.log("data Fetch")
     fetch(
       "https://script.google.com/macros/s/AKfycbx9c-2XTbioCGYRWcg56I7G2-TZWr0zPsUNd--YRa_NtdEvTK4xXOo16l-KsJ8jUAfg/exec?id=0"
     )

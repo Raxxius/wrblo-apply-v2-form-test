@@ -114,7 +114,6 @@ export function handleFormChange(event, setFormData, pageNumber) {
     });
     let returnValue = { ...prevFormData };
     returnValue.formList[pageNumber - 1] = newFormData;
-    console.log(returnValue)
     return returnValue;
   });
 }
