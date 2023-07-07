@@ -23,7 +23,7 @@ const FormItem = (props) => {
   /** If a help button is in the form data, adds one, else doesn't render */
   let helpButtonDiv = "";
 
-  if (helpButton != undefined) {
+  if (helpButton !== undefined) {
     helpButtonDiv = (
       <button
         className="form-help-button"
