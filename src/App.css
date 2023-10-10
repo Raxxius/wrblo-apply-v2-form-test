@@ -244,6 +244,47 @@ input {
   color: #fff;
 }
 
+/** Footer styling **/
+
+footer {
+  font-family: 'Merriweather', serif;
+  background-color: #262353;
+  color: #fff;
+  padding: 98px 0 90px;
+}
+
+footer a {
+  font-size: 13px;
+  text-decoration: none;
+  color: #c29f48;
+}
+
+.footer-inner {
+  max-width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.footer-tail {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-links {
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 21px;
+  padding-bottom: 21px;
+}
+
+.footer-text {
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 21px;
+  padding-bottom: 21px;
+}
+
+
 @media (min-width: 660px) {
   .save-load-button {
     flex-direction: row;
