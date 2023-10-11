@@ -284,6 +284,18 @@ footer a {
   padding-bottom: 21px;
 }
 
+.footer-header {
+  margin-bottom: 29px;
+  font-size: 18px;
+  line-height: 1.445em;
+  font-weight: 600;
+}
+
+.footer-about {
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
 
 @media (min-width: 660px) {
   .save-load-button {
@@ -297,6 +309,22 @@ footer a {
 
   .save-button {
     margin-top: 0;
+  }
+
+  .footer-tail {
+    flex-direction: row;
+  }
+
+  .footer-links {
+    margin-left: 0;
+  }
+
+  .footer-trademark {
+    margin-right: 0;
+  }
+
+  .footer-inner {
+    max-width: 600px;
   }
 }
 
@@ -333,6 +361,10 @@ footer a {
 
   label {
     width: 450px;
+  }
+
+  .footer-inner {
+    max-width: 1200px;
   }
 
 }
