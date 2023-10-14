@@ -1,3 +1,8 @@
+import Instagram from "../assets/instagram"
+import Facebook from "../assets/facebook-f"
+import Twitter from "../assets/twitter"
+import Youtube from "../assets/youtube"
+
 const Main = () => {
   return (
     <div className="footer-main-grid">
@@ -8,6 +13,12 @@ const Main = () => {
           organisations that are innovatively relieving poverty; advancing
           healthcare; and providing education at ground zero of poverty.
         </p>
+        <div className="footer-socials">
+          <a href="https://www.instagram.com/wrblo_/" target="_blank"  className="footer-icon"><Instagram /></a>
+          <a href="https://twitter.com/wrblo" target="_blank" className="footer-icon"><Twitter /></a>
+          <a href="https://www.facebook.com/wrblo.org" target="_blank" className="footer-icon"><Facebook /></a>
+          <a href="https://www.youtube.com/channel/UCXCKEOu2x_asMl_okd808SQ" target="_blank" className="footer-icon"><Youtube /></a>
+        </div>
       </div>
       <div className="footer-latest"></div>
       <div className="footer-twitter-feed"></div>
