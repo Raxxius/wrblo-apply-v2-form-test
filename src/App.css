@@ -246,6 +246,29 @@ input {
   z-index: 999;
 }
 
+.header-wrapper {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-title {
+  font-size: 1.5em;
+}
+
+.header-links {
+  text-decoration: none;
+  color: #262353;
+  font-size: 0.82em;
+}
+
+.header-links:hover {
+  color: #c29f48;
+}
+
 .header-image {
   height: 80px;
 }
