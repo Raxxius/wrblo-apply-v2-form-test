@@ -10,21 +10,6 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-.main-header {
-  position: relative;
-  justify-content: center;
-  align-items: center;
-  height: 90px;
-  text-align: center;
-  border-bottom: 1px solid black;
-  font-weight: 600;
-  font-size: 16px;
-  line-height: 24px;
-  color: #262353;
-  display: flex;
-  z-index: 999;
-}
-
 /** form basic CSS */
 
 .form-header {
@@ -242,6 +227,27 @@ input {
   margin-top: 15px;
   background-color: #262353;
   color: #fff;
+}
+
+/** Header styling **/
+
+.main-header {
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  height: 90px;
+  text-align: center;
+  border-bottom: 1px solid black;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  color: #262353;
+  display: flex;
+  z-index: 999;
+}
+
+.header-image {
+  height: 80px;
 }
 
 /** Footer styling **/
