@@ -14,10 +14,10 @@ const Main = () => {
           healthcare; and providing education at ground zero of poverty.
         </p>
         <div className="footer-socials">
-          <a href="https://www.instagram.com/wrblo_/" target="_blank"  className="footer-icon"><Instagram /></a>
-          <a href="https://twitter.com/wrblo" target="_blank" className="footer-icon"><Twitter /></a>
-          <a href="https://www.facebook.com/wrblo.org" target="_blank" className="footer-icon"><Facebook /></a>
-          <a href="https://www.youtube.com/channel/UCXCKEOu2x_asMl_okd808SQ" target="_blank" className="footer-icon"><Youtube /></a>
+          <a href="https://www.instagram.com/wrblo_/" target="_blank" rel="noreferrer" className="footer-icon"><Instagram /></a>
+          <a href="https://twitter.com/wrblo" target="_blank" rel="noreferrer" className="footer-icon"><Twitter /></a>
+          <a href="https://www.facebook.com/wrblo.org" target="_blank" rel="noreferrer" className="footer-icon"><Facebook /></a>
+          <a href="https://www.youtube.com/channel/UCXCKEOu2x_asMl_okd808SQ" target="_blank" rel="noreferrer" className="footer-icon"><Youtube /></a>
         </div>
       </div>
       <div className="footer-latest"></div>
@@ -37,7 +37,7 @@ const Tail = () => {
         <span>&copy;</span>2023 All rights reserved
       </div>
       <div className="footer-text footer-trademark">
-        <a href="">Trademarks</a>
+        <a href="https://wrblo.org/trademarks/">Trademarks</a>
       </div>
     </div>
   );
