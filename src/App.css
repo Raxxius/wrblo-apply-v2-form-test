@@ -1,5 +1,5 @@
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Merriweather', serif;
   font-size: 14px;
   line-height: 26px;
   color: #888;
@@ -232,6 +232,7 @@ input {
 /** Header styling **/
 
 .main-header {
+  font-family: 'Open Sans', sans-serif;
   position: relative;
   justify-content: center;
   align-items: center;
@@ -256,13 +257,14 @@ input {
 }
 
 .header-title {
-  font-size: 1.5em;
+  font-size: 18px;
 }
 
 .header-links {
   text-decoration: none;
   color: #262353;
-  font-size: 0.82em;
+  font-size: 15px;
+  font-weight: 600;
 }
 
 .header-links:hover {
@@ -276,7 +278,7 @@ input {
 /** Footer styling **/
 
 footer {
-  font-family: 'Merriweather', serif;
+
   background-color: #262353;
   color: #fff;
   padding: 98px 0 5px;
