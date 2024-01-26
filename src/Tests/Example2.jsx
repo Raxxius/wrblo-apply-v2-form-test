@@ -125,7 +125,7 @@ const WRBLO_PRELIMINARY = {
           {
             id: "12",
             listType: "textarea",
-            formlegend: "Measureable impact",
+            formlegend: "Measurable impact",
             formText: "",
             maxCharacter: 1000,
           },

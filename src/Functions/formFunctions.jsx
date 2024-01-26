@@ -77,8 +77,8 @@ export function handleSubmit(pages) {
     }
   });
 
-  const mailto = `mailto:mail@gmail.com?subject=WRBLO Preliminary submit form&body=${emailBody}`;
-  window.location.href = mailto;
+  const mailto = `mailto:Apply@wrblo.org?subject=WRBLO Preliminary submit form&body=${emailBody}`;
+  window.open(mailto, "_blank");
 }
 
 /* Handle Form updates
